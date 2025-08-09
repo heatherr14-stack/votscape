@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "Votscape",
+    "slug": "votscape-civic-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#2563eb"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.votscape.civicapp",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Votscape uses your location to show local voting data and help you find nearby polling locations.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Votscape uses your location to show local voting data and help you find nearby polling locations."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#2563eb"
+      },
+      "package": "com.votscape.civicapp",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Votscape to use your location to show local voting data and help you find nearby polling locations.",
+          "isIosBackgroundLocationEnabled": false
+        }
+      ],
+      "expo-maps"
+    ],
+    "scheme": "votscape",
+    "owner": "your-expo-username",
+    "privacy": "public",
+    "description": "Votscape is a civic engagement app that helps citizens visualize local voting patterns and participate in democracy through interactive maps, voter registration tools, and educational resources.",
+    "githubUrl": "https://github.com/your-username/votscape",
+    "primaryColor": "#2563eb",
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/your-project-id-here"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    }
+  }
+}
