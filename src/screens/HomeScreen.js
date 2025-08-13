@@ -304,8 +304,328 @@ const HomeScreen = () => {
       };
     };
 
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        backgroundColor: colors.background,
+      },
+      header: {
+        padding: 20,
+        backgroundColor: colors.primary,
+        alignItems: 'center',
+      },
+      title: {
+        fontWeight: 'bold',
+        color: colors.white,
+        marginBottom: 4,
+      },
+      subtitle: {
+        color: colors.white,
+        opacity: 0.9,
+      },
+      dropdownContainer: {
+        padding: 16,
+        backgroundColor: colors.surface,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.lightGray,
+      },
+      content: {
+        flex: 1,
+      },
+      locationInfo: {
+        padding: 16,
+        backgroundColor: colors.white,
+        marginBottom: 8,
+      },
+      locationHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 8,
+      },
+      locationButton: {
+        padding: 8,
+        borderRadius: 20,
+        backgroundColor: colors.surface,
+      },
+      sectionTitle: {
+        fontWeight: '600',
+        color: colors.textPrimary,
+      },
+      sectionSubtitle: {
+        color: colors.textSecondary,
+        marginBottom: 16,
+        fontStyle: 'italic',
+      },
+      locationName: {
+        color: colors.textPrimary,
+        fontWeight: '500',
+        marginBottom: 4,
+      },
+      locationCoords: {
+        color: colors.textSecondary,
+        fontFamily: 'monospace',
+      },
+      manualLocationNote: {
+        color: colors.primary,
+        fontStyle: 'italic',
+        marginTop: 4,
+      },
+      locationText: {
+        color: colors.textSecondary,
+      },
+      electionsContainer: {
+        padding: 16,
+        backgroundColor: colors.white,
+        marginBottom: 8,
+      },
+      electionCard: {
+        padding: 12,
+        backgroundColor: colors.surface,
+        borderRadius: 8,
+        marginBottom: 12,
+        borderWidth: 1,
+        borderColor: colors.lightGray,
+      },
+      selectedElection: {
+        borderColor: colors.primary,
+        backgroundColor: colors.primaryLight,
+      },
+      electionHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 8,
+      },
+      electionName: {
+        fontWeight: '600',
+        color: colors.textPrimary,
+        flex: 1,
+      },
+      electionTypeBadge: {
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        borderRadius: 12,
+        marginLeft: 8,
+      },
+      electionType: {
+        color: colors.white,
+        fontWeight: '500',
+      },
+      candidatesText: {
+        color: colors.textSecondary,
+        marginBottom: 4,
+      },
+      winnerText: {
+        color: colors.textPrimary,
+        fontWeight: '500',
+        marginBottom: 4,
+      },
+      votesText: {
+        color: colors.textSecondary,
+        fontStyle: 'italic',
+        marginBottom: 8,
+      },
+      voteBar: {
+        flexDirection: 'row',
+        height: 6,
+        borderRadius: 3,
+        overflow: 'hidden',
+        marginBottom: 8,
+      },
+      voteSegment: {
+        height: '100%',
+      },
+      percentages: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      },
+      percentageText: {
+        color: colors.textSecondary,
+        fontWeight: '500',
+      },
+      resultsContainer: {
+        margin: 16,
+      },
+      detailsCard: {
+        backgroundColor: colors.white,
+        padding: 16,
+        borderRadius: 8,
+        shadowColor: colors.black,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 3,
+      },
+      detailsTitle: {
+        fontWeight: 'bold',
+        color: colors.textPrimary,
+        marginBottom: 4,
+      },
+      detailsYear: {
+        color: colors.textSecondary,
+        marginBottom: 16,
+      },
+      detailsGrid: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+      },
+      detailItem: {
+        width: '48%',
+        marginBottom: 12,
+      },
+      fullWidth: {
+        width: '100%',
+      },
+      detailLabel: {
+        color: colors.textSecondary,
+        marginBottom: 4,
+      },
+      detailValue: {
+        fontWeight: 'bold',
+        color: colors.textPrimary,
+      },
+      detailVotes: {
+        color: colors.textSecondary,
+        marginTop: 2,
+      },
+      infoCard: {
+        margin: 16,
+        padding: 16,
+        backgroundColor: colors.white,
+        borderRadius: 8,
+        borderLeftWidth: 4,
+        borderLeftColor: colors.primary,
+      },
+      infoTitle: {
+        fontWeight: '600',
+        color: colors.textPrimary,
+        marginBottom: 8,
+      },
+      infoText: {
+        color: colors.textSecondary,
+        lineHeight: 20,
+      },
+      stickyFooter: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        padding: 16,
+        backgroundColor: colors.surface,
+        borderTopWidth: 1,
+        borderTopColor: colors.lightGray,
+      },
+      nextElectionLabel: {
+        fontWeight: '600',
+        color: colors.textPrimary,
+        marginBottom: 8,
+      },
+      nextElectionDate: {
+        color: colors.textPrimary,
+        marginBottom: 4,
+      },
+      nextElectionType: {
+        color: colors.textSecondary,
+      },
+      modalOverlay: {
+        flex: 1,
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      modalContent: {
+        backgroundColor: colors.white,
+        borderRadius: 12,
+        width: '90%',
+        maxWidth: 400,
+        shadowColor: colors.black,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.25,
+        shadowRadius: 8,
+        elevation: 8,
+      },
+      modalHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 16,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.lightGray,
+      },
+      modalTitle: {
+        fontWeight: 'bold',
+        color: colors.textPrimary,
+      },
+      modalBody: {
+        padding: 16,
+      },
+      modalDescription: {
+        color: colors.textSecondary,
+        marginBottom: 16,
+        lineHeight: 20,
+      },
+      locationInput: {
+        borderWidth: 1,
+        borderColor: colors.lightGray,
+        borderRadius: 8,
+        padding: 12,
+        marginBottom: 16,
+        backgroundColor: colors.surface,
+      },
+      modalButtons: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        gap: 12,
+      },
+      modalButton: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 12,
+        borderRadius: 8,
+        gap: 8,
+      },
+      useGpsButton: {
+        backgroundColor: colors.success || '#059669',
+      },
+      setLocationButton: {
+        backgroundColor: colors.primary,
+      },
+      buttonText: {
+        color: colors.white,
+        fontWeight: '500',
+      },
+      candidateLink: {
+        color: colors.primary,
+        textDecorationLine: 'underline',
+        fontWeight: '500',
+      },
+      winnerLink: {
+        color: colors.primary,
+        textDecorationLine: 'underline',
+        fontWeight: 'bold',
+      },
+      sourceText: {
+        color: colors.textPrimary,
+        fontWeight: '500',
+      },
+      tapForSourceHint: {
+        padding: 8,
+        backgroundColor: colors.surface,
+        borderRadius: 8,
+        marginBottom: 8,
+      },
+      tapHintText: {
+        color: colors.textSecondary,
+        fontStyle: 'italic',
+      },
+    });
+
     return (
-      <ScrollView style={[styles.container, { backgroundColor: safeColors.background }]}>
+      <ScrollView>
         {/* Header */}
         <View style={styles.header}>
           <Text style={[styles.title, { 
@@ -812,325 +1132,5 @@ const TEXAS_COUNTY_ELECTIONS = {
     ]
   }
 };
-
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: colors.background,
-    },
-    header: {
-      padding: 20,
-      backgroundColor: colors.primary,
-      alignItems: 'center',
-    },
-    title: {
-      fontWeight: 'bold',
-      color: colors.white,
-      marginBottom: 4,
-    },
-    subtitle: {
-      color: colors.white,
-      opacity: 0.9,
-    },
-    dropdownContainer: {
-      padding: 16,
-      backgroundColor: colors.surface,
-      borderBottomWidth: 1,
-      borderBottomColor: colors.lightGray,
-    },
-    content: {
-      flex: 1,
-    },
-    locationInfo: {
-      padding: 16,
-      backgroundColor: colors.white,
-      marginBottom: 8,
-    },
-    locationHeader: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginBottom: 8,
-    },
-    locationButton: {
-      padding: 8,
-      borderRadius: 20,
-      backgroundColor: colors.surface,
-    },
-    sectionTitle: {
-      fontWeight: '600',
-      color: colors.textPrimary,
-    },
-    sectionSubtitle: {
-      color: colors.textSecondary,
-      marginBottom: 16,
-      fontStyle: 'italic',
-    },
-    locationName: {
-      color: colors.textPrimary,
-      fontWeight: '500',
-      marginBottom: 4,
-    },
-    locationCoords: {
-      color: colors.textSecondary,
-      fontFamily: 'monospace',
-    },
-    manualLocationNote: {
-      color: colors.primary,
-      fontStyle: 'italic',
-      marginTop: 4,
-    },
-    locationText: {
-      color: colors.textSecondary,
-    },
-    electionsContainer: {
-      padding: 16,
-      backgroundColor: colors.white,
-      marginBottom: 8,
-    },
-    electionCard: {
-      padding: 12,
-      backgroundColor: colors.surface,
-      borderRadius: 8,
-      marginBottom: 12,
-      borderWidth: 1,
-      borderColor: colors.lightGray,
-    },
-    selectedElection: {
-      borderColor: colors.primary,
-      backgroundColor: colors.primaryLight,
-    },
-    electionHeader: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginBottom: 8,
-    },
-    electionName: {
-      fontWeight: '600',
-      color: colors.textPrimary,
-      flex: 1,
-    },
-    electionTypeBadge: {
-      paddingHorizontal: 8,
-      paddingVertical: 4,
-      borderRadius: 12,
-      marginLeft: 8,
-    },
-    electionType: {
-      color: colors.white,
-      fontWeight: '500',
-    },
-    candidatesText: {
-      color: colors.textSecondary,
-      marginBottom: 4,
-    },
-    winnerText: {
-      color: colors.textPrimary,
-      fontWeight: '500',
-      marginBottom: 4,
-    },
-    votesText: {
-      color: colors.textSecondary,
-      fontStyle: 'italic',
-      marginBottom: 8,
-    },
-    voteBar: {
-      flexDirection: 'row',
-      height: 6,
-      borderRadius: 3,
-      overflow: 'hidden',
-      marginBottom: 8,
-    },
-    voteSegment: {
-      height: '100%',
-    },
-    percentages: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    },
-    percentageText: {
-      color: colors.textSecondary,
-      fontWeight: '500',
-    },
-    resultsContainer: {
-      margin: 16,
-    },
-    detailsCard: {
-      backgroundColor: colors.white,
-      padding: 16,
-      borderRadius: 8,
-      shadowColor: colors.black,
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.1,
-      shadowRadius: 4,
-      elevation: 3,
-    },
-    detailsTitle: {
-      fontWeight: 'bold',
-      color: colors.textPrimary,
-      marginBottom: 4,
-    },
-    detailsYear: {
-      color: colors.textSecondary,
-      marginBottom: 16,
-    },
-    detailsGrid: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'space-between',
-    },
-    detailItem: {
-      width: '48%',
-      marginBottom: 12,
-    },
-    fullWidth: {
-      width: '100%',
-    },
-    detailLabel: {
-      color: colors.textSecondary,
-      marginBottom: 4,
-    },
-    detailValue: {
-      fontWeight: 'bold',
-      color: colors.textPrimary,
-    },
-    detailVotes: {
-      color: colors.textSecondary,
-      marginTop: 2,
-    },
-    infoCard: {
-      margin: 16,
-      padding: 16,
-      backgroundColor: colors.white,
-      borderRadius: 8,
-      borderLeftWidth: 4,
-      borderLeftColor: colors.primary,
-    },
-    infoTitle: {
-      fontWeight: '600',
-      color: colors.textPrimary,
-      marginBottom: 8,
-    },
-    infoText: {
-      color: colors.textSecondary,
-      lineHeight: 20,
-    },
-    stickyFooter: {
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      padding: 16,
-      backgroundColor: colors.surface,
-      borderTopWidth: 1,
-      borderTopColor: colors.lightGray,
-    },
-    nextElectionLabel: {
-      fontWeight: '600',
-      color: colors.textPrimary,
-      marginBottom: 8,
-    },
-    nextElectionDate: {
-      color: colors.textPrimary,
-      marginBottom: 4,
-    },
-    nextElectionType: {
-      color: colors.textSecondary,
-    },
-    modalOverlay: {
-      flex: 1,
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    modalContent: {
-      backgroundColor: colors.white,
-      borderRadius: 12,
-      width: '90%',
-      maxWidth: 400,
-      shadowColor: colors.black,
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.25,
-      shadowRadius: 8,
-      elevation: 8,
-    },
-    modalHeader: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: 16,
-      borderBottomWidth: 1,
-      borderBottomColor: colors.lightGray,
-    },
-    modalTitle: {
-      fontWeight: 'bold',
-      color: colors.textPrimary,
-    },
-    modalBody: {
-      padding: 16,
-    },
-    modalDescription: {
-      color: colors.textSecondary,
-      marginBottom: 16,
-      lineHeight: 20,
-    },
-    locationInput: {
-      borderWidth: 1,
-      borderColor: colors.lightGray,
-      borderRadius: 8,
-      padding: 12,
-      marginBottom: 16,
-      backgroundColor: colors.surface,
-    },
-    modalButtons: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      gap: 12,
-    },
-    modalButton: {
-      flex: 1,
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: 12,
-      borderRadius: 8,
-      gap: 8,
-    },
-    useGpsButton: {
-      backgroundColor: colors.success || '#059669',
-    },
-    setLocationButton: {
-      backgroundColor: colors.primary,
-    },
-    buttonText: {
-      color: colors.white,
-      fontWeight: '500',
-    },
-    candidateLink: {
-      color: colors.primary,
-      textDecorationLine: 'underline',
-      fontWeight: '500',
-    },
-    winnerLink: {
-      color: colors.primary,
-      textDecorationLine: 'underline',
-      fontWeight: 'bold',
-    },
-    sourceText: {
-      color: colors.textPrimary,
-      fontWeight: '500',
-    },
-    tapForSourceHint: {
-      padding: 8,
-      backgroundColor: colors.surface,
-      borderRadius: 8,
-      marginBottom: 8,
-    },
-    tapHintText: {
-      color: colors.textSecondary,
-      fontStyle: 'italic',
-    },
-  });
 }
 export default HomeScreen;

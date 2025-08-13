@@ -9,20 +9,27 @@ import ElectionDropdown from '../components/ElectionDropdown';
 
 const { width, height } = Dimensions.get('window');
 
-// Conditional import for expo-maps to prevent app crashes
+// Platform-specific map imports
 let MapView, Marker, Polygon;
 let mapsAvailable = false;
 
-try {
-  const ExpoMaps = require('expo-maps');
-  MapView = ExpoMaps.MapView;
-  Marker = ExpoMaps.Marker;
-  Polygon = ExpoMaps.Polygon;
-  mapsAvailable = true;
-  console.log('Expo Maps loaded successfully');
-} catch (error) {
-  console.log('Expo Maps not available:', error.message);
-  mapsAvailable = false;
+if (Platform.OS === 'web') {
+  // For web platform, we'll use a enhanced fallback with embedded map
+  console.log('🌐 Web platform detected - using enhanced web map interface');
+  mapsAvailable = true; // We'll provide a functional web alternative
+} else {
+  // For mobile platforms, try to load expo-maps
+  try {
+    const ExpoMaps = require('expo-maps');
+    MapView = ExpoMaps.MapView;
+    Marker = ExpoMaps.Marker;
+    Polygon = ExpoMaps.Polygon;
+    mapsAvailable = true;
+    console.log('✅ Expo Maps loaded successfully for mobile');
+  } catch (error) {
+    console.log('❌ Expo Maps not available on mobile:', error.message);
+    mapsAvailable = false;
+  }
 }
 
 export default function MapScreen() {
@@ -263,8 +270,9 @@ export default function MapScreen() {
       {/* Conditional rendering: Use map if available, fallback otherwise */}
       {mapsAvailable ? (
         mapRegion ? (
-          <>
-            {/* Interactive Map */}
+          Platform.OS === 'web' ? (
+            <MapFallback />
+          ) : (
             <MapView
               style={styles.map}
               initialRegion={mapRegion}
@@ -297,31 +305,7 @@ export default function MapScreen() {
                 />
               ))}
             </MapView>
-
-            {/* Legend */}
-            <View style={styles.legend}>
-              <Text style={[styles.legendTitle, { fontSize: getScaledFontSize(14) }]}>
-                Election Results ({selectedYear})
-              </Text>
-              <View style={styles.legendItems}>
-                <View style={styles.legendItem}>
-                  <View style={[styles.legendColor, { backgroundColor: '#3B82F6' }]} />
-                  <Text style={[styles.legendText, { fontSize: getScaledFontSize(12) }]}>
-                    Democratic
-                  </Text>
-                </View>
-                <View style={styles.legendItem}>
-                  <View style={[styles.legendColor, { backgroundColor: '#EF4444' }]} />
-                  <Text style={[styles.legendText, { fontSize: getScaledFontSize(12) }]}>
-                    Republican
-                  </Text>
-                </View>
-              </View>
-              <Text style={[styles.legendNote, { fontSize: getScaledFontSize(10) }]}>
-                Tap regions for detailed results
-              </Text>
-            </View>
-          </>
+          )
         ) : (
           <View style={styles.loadingContainer}>
             <Text style={[styles.loadingText, { fontSize: getScaledFontSize(16) }]}>
