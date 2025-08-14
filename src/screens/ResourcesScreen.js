@@ -15,6 +15,7 @@ import * as Location from 'expo-location';
 
 import { colors } from '../utils/colors';
 import { useAccessibility } from '../contexts/AccessibilityContext';
+import SuggestionForm from '../components/SuggestionForm';
 
 // US States data
 const US_STATES = [
@@ -222,6 +223,7 @@ const getPoliticalLeanIcon = (lean) => {
 export default function ResourcesScreen() {
   const [selectedState, setSelectedState] = useState(null);
   const [stateModalVisible, setStateModalVisible] = useState(false);
+  const [suggestionModalVisible, setSuggestionModalVisible] = useState(false);
   const [locationLoading, setLocationLoading] = useState(true);
   const { getScaledFontSize, getAccessibleColors } = useAccessibility();
   
@@ -445,6 +447,23 @@ export default function ResourcesScreen() {
           ))}
         </View>
 
+        {/* Suggest a Creator Button */}
+        <View style={styles.section}>
+          <Text style={[styles.sectionTitle, { fontSize: getScaledFontSize(20) }]}>
+            Suggest a Creator
+          </Text>
+          <TouchableOpacity
+            style={styles.suggestButton}
+            onPress={() => setSuggestionModalVisible(true)}
+            accessibilityLabel="Suggest a creator"
+            accessibilityHint="Open the suggestion form to recommend a local creator"
+          >
+            <Text style={[styles.suggestButtonText, { fontSize: getScaledFontSize(16) }]}>
+              Suggest a Creator
+            </Text>
+          </TouchableOpacity>
+        </View>
+
         {/* State-Specific Resources */}
         {selectedState && (
           <View style={styles.section}>
@@ -597,6 +616,31 @@ export default function ResourcesScreen() {
                 </TouchableOpacity>
               ))}
             </ScrollView>
+          </View>
+        </View>
+      </Modal>
+
+      {/* Suggestion Modal */}
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={suggestionModalVisible}
+        onRequestClose={() => setSuggestionModalVisible(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <View style={styles.modalHeader}>
+              <Text style={[styles.modalTitle, { fontSize: getScaledFontSize(18) }]}>
+                Suggest a Creator
+              </Text>
+              <TouchableOpacity
+                onPress={() => setSuggestionModalVisible(false)}
+                accessibilityLabel="Close suggestion form"
+              >
+                <Ionicons name="close" size={24} color={colors.textPrimary} />
+              </TouchableOpacity>
+            </View>
+            <SuggestionForm />
           </View>
         </View>
       </Modal>
@@ -800,6 +844,19 @@ const styles = StyleSheet.create({
   },
   selectedStateText: {
     color: colors.primary,
+    fontWeight: '600',
+  },
+  suggestButton: {
+    backgroundColor: colors.surface,
+    padding: 16,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: colors.lightGray,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  suggestButtonText: {
+    color: colors.textPrimary,
     fontWeight: '600',
   },
 });
