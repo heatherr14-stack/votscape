@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator, Alert, Platform } from 'react-native';
 import * as Location from 'expo-location';
 import { useAccessibility } from '../contexts/AccessibilityContext';
+import WebMap from '../components/WebMap';
 
 // Cross-platform map component
 function CrossPlatformMap({ location, loading }) {
@@ -18,25 +19,33 @@ function CrossPlatformMap({ location, loading }) {
     );
   }
 
-  if (Platform.OS === 'web') {
-    // Web fallback - simple location display
+  // Normalize location data for both web and mobile
+  const normalizedLocation = Platform.OS === 'web' 
+    ? { latitude: location?.lat, longitude: location?.lng }
+    : { latitude: location?.latitude, longitude: location?.longitude };
+
+  if (!normalizedLocation.latitude || !normalizedLocation.longitude) {
     return (
-      <View style={styles.webMapContainer}>
-        <View style={styles.webMapPlaceholder}>
-          <Text style={[styles.webMapText, { fontSize: getScaledFontSize(18) }]}>
-            📍 Interactive Map
-          </Text>
-          <Text style={[styles.webMapSubtext, { fontSize: getScaledFontSize(14) }]}>
-            Your Location: {location?.lat?.toFixed(4)}, {location?.lng?.toFixed(4)}
-          </Text>
-          <Text style={[styles.webMapNote, { fontSize: getScaledFontSize(12) }]}>
-            Full map functionality available on mobile app
-          </Text>
-        </View>
+      <View style={styles.fallbackContainer}>
+        <Text style={[styles.fallbackTitle, { fontSize: getScaledFontSize(18) }]}>
+          📍 Location Error
+        </Text>
+        <Text style={[styles.fallbackText, { fontSize: getScaledFontSize(14) }]}>
+          Unable to determine your location
+        </Text>
+      </View>
+    );
+  }
+
+  if (Platform.OS === 'web') {
+    // Web: Use Leaflet map
+    return (
+      <View style={styles.mapContainer}>
+        <WebMap location={normalizedLocation} />
       </View>
     );
   } else {
-    // Mobile: Use expo-maps if available
+    // Mobile: Use expo-maps
     try {
       const MapView = require('expo-maps').default;
       const Marker = require('expo-maps').Marker;
@@ -46,8 +55,8 @@ function CrossPlatformMap({ location, loading }) {
           <MapView
             style={styles.map}
             initialRegion={{
-              latitude: location.latitude,
-              longitude: location.longitude,
+              latitude: normalizedLocation.latitude,
+              longitude: normalizedLocation.longitude,
               latitudeDelta: 0.05,
               longitudeDelta: 0.05,
             }}
@@ -57,8 +66,8 @@ function CrossPlatformMap({ location, loading }) {
           >
             <Marker
               coordinate={{
-                latitude: location.latitude,
-                longitude: location.longitude,
+                latitude: normalizedLocation.latitude,
+                longitude: normalizedLocation.longitude,
               }}
               title="You are here"
               description="Your current location"
@@ -74,10 +83,10 @@ function CrossPlatformMap({ location, loading }) {
             📍 Location Found
           </Text>
           <Text style={[styles.fallbackText, { fontSize: getScaledFontSize(14) }]}>
-            Latitude: {location.latitude?.toFixed(6)}
+            Latitude: {normalizedLocation.latitude?.toFixed(6)}
           </Text>
           <Text style={[styles.fallbackText, { fontSize: getScaledFontSize(14) }]}>
-            Longitude: {location.longitude?.toFixed(6)}
+            Longitude: {normalizedLocation.longitude?.toFixed(6)}
           </Text>
           <Text style={[styles.fallbackNote, { fontSize: getScaledFontSize(12) }]}>
             Install expo-maps for full map functionality
@@ -247,37 +256,6 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 16,
     color: '#666',
-    textAlign: 'center',
-  },
-  webMapContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#e8f4f8',
-  },
-  webMapPlaceholder: {
-    backgroundColor: '#FFFFFF',
-    padding: 40,
-    borderRadius: 12,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  webMapText: {
-    fontWeight: 'bold',
-    color: '#007AFF',
-    marginBottom: 8,
-  },
-  webMapSubtext: {
-    color: '#333',
-    marginBottom: 8,
-  },
-  webMapNote: {
-    color: '#666',
-    fontStyle: 'italic',
     textAlign: 'center',
   },
   fallbackContainer: {
