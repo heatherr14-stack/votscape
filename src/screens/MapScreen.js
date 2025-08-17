@@ -187,7 +187,7 @@ export default function MapScreen() {
           Votscape Map
         </Text>
         <Text style={[styles.headerSubtitle, { fontSize: getScaledFontSize(14) }]}>
-          Your location and future election results
+          Your location and presidential election results
         </Text>
       </View>
 

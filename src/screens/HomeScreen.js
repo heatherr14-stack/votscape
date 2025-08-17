@@ -541,7 +541,7 @@ const TEXAS_COUNTY_ELECTIONS = {
         name: 'El Paso County - Mayor (El Paso)',
         type: 'Mayor',
         data: { candidate1: 68.2, candidate2: 31.8, totalVotes: 87654, winner: 'candidate1' },
-        candidates: ['Oscar Leeser (D)', 'Irene Cabrera (R)'],
+        candidates: ['Oscar Leeser (D)', 'Ikaika Marzo (R)'],
         source: 'El Paso County Clerk'
       },
       {
@@ -795,30 +795,981 @@ const DELAWARE_COUNTY_ELECTIONS = {
   }
 };
 
+const HAWAII_COUNTY_ELECTIONS = {
+  'Honolulu': {
+    '2024': [
+      {
+        name: 'Honolulu County - President',
+        type: 'President',
+        data: { candidate1: 63.2, candidate2: 35.8, totalVotes: 456789, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Honolulu City Clerk'
+      },
+      {
+        name: 'Honolulu County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 65.4, candidate2: 32.6, totalVotes: 445321, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Honolulu City Clerk'
+      },
+      {
+        name: 'Honolulu County - Governor',
+        type: 'Governor',
+        data: { candidate1: 61.8, candidate2: 36.2, totalVotes: 432109, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Honolulu City Clerk'
+      },
+      {
+        name: 'Honolulu County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 58.7, candidate2: 41.3, totalVotes: 387654, winner: 'candidate1' },
+        candidates: ['Rick Blangiardi (I)', 'Keith Amemiya (I)'],
+        source: 'Honolulu City Clerk'
+      },
+      {
+        name: 'Honolulu County - Treasurer',
+        type: 'Treasurer',
+        data: { candidate1: 59.2, candidate2: 40.8, totalVotes: 376543, winner: 'candidate1' },
+        candidates: ['Aaron Fujioka (D)', 'Charles Djou (R)'],
+        source: 'Honolulu City Clerk'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Honolulu County - Governor',
+        type: 'Governor',
+        data: { candidate1: 63.2, candidate2: 36.8, totalVotes: 298765, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Honolulu County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 71.2, candidate2: 28.8, totalVotes: 287654, winner: 'candidate1' },
+        candidates: ['Brian Schatz (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Honolulu County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 57.3, candidate2: 42.7, totalVotes: 276543, winner: 'candidate1' },
+        candidates: ['Rick Blangiardi (I)', 'Keith Amemiya (I)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Honolulu County - City Council',
+        type: 'Treasurer',
+        data: { candidate1: 54.6, candidate2: 45.4, totalVotes: 265432, winner: 'candidate1' },
+        candidates: ['Tommy Waters (D)', 'Carol Fukunaga (D)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Honolulu County - President',
+        type: 'President',
+        data: { candidate1: 63.7, candidate2: 34.3, totalVotes: 487654, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Honolulu County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 71.8, candidate2: 28.2, totalVotes: 476543, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Honolulu County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 58.9, candidate2: 41.1, totalVotes: 365432, winner: 'candidate1' },
+        candidates: ['Rick Blangiardi (I)', 'Keith Amemiya (I)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Honolulu County - City Council',
+        type: 'Treasurer',
+        data: { candidate1: 56.4, candidate2: 43.6, totalVotes: 354321, winner: 'candidate1' },
+        candidates: ['Tommy Waters (D)', 'Carol Fukunaga (D)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ]
+  },
+  'Hawaii': {
+    '2024': [
+      {
+        name: 'Hawaii County - President',
+        type: 'President',
+        data: { candidate1: 58.4, candidate2: 40.6, totalVotes: 654321, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Hawaii County Clerk'
+      },
+      {
+        name: 'Hawaii County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 60.7, candidate2: 37.3, totalVotes: 634567, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii County Clerk'
+      },
+      {
+        name: 'Hawaii County - Governor',
+        type: 'Governor',
+        data: { candidate1: 57.2, candidate2: 41.8, totalVotes: 623456, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Hawaii County Clerk'
+      },
+      {
+        name: 'Hawaii County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 52.3, candidate2: 47.7, totalVotes: 587654, winner: 'candidate1' },
+        candidates: ['Mitch Roth (D)', 'Ikaika Marzo (R)'],
+        source: 'Hawaii County Clerk'
+      },
+      {
+        name: 'Hawaii County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 54.8, candidate2: 45.2, totalVotes: 576543, winner: 'candidate1' },
+        candidates: ['Maile David (D)', 'Tim Richards (R)'],
+        source: 'Hawaii County Clerk'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Hawaii County - Governor',
+        type: 'Governor',
+        data: { candidate1: 58.9, candidate2: 41.1, totalVotes: 54321, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Hawaii County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 62.4, candidate2: 37.6, totalVotes: 523456, winner: 'candidate1' },
+        candidates: ['Brian Schatz (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Hawaii County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 51.7, candidate2: 48.3, totalVotes: 498765, winner: 'candidate1' },
+        candidates: ['Mitch Roth (D)', 'Ikaika Marzo (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Hawaii County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 53.2, candidate2: 46.8, totalVotes: 476543, winner: 'candidate1' },
+        candidates: ['Maile David (D)', 'Tim Richards (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Hawaii County - President',
+        type: 'President',
+        data: { candidate1: 60.2, candidate2: 38.8, totalVotes: 654321, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Hawaii County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 63.8, candidate2: 36.2, totalVotes: 634567, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Hawaii County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 53.6, candidate2: 46.4, totalVotes: 587654, winner: 'candidate1' },
+        candidates: ['Mitch Roth (D)', 'Ikaika Marzo (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Hawaii County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 55.1, candidate2: 44.9, totalVotes: 576543, winner: 'candidate1' },
+        candidates: ['Maile David (D)', 'Tim Richards (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ]
+  },
+  'Maui': {
+    '2024': [
+      {
+        name: 'Maui County - President',
+        type: 'President',
+        data: { candidate1: 61.5, candidate2: 37.5, totalVotes: 76543, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Maui County Clerk'
+      },
+      {
+        name: 'Maui County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 63.8, candidate2: 34.2, totalVotes: 74321, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Maui County Clerk'
+      },
+      {
+        name: 'Maui County - Governor',
+        type: 'Governor',
+        data: { candidate1: 60.2, candidate2: 38.8, totalVotes: 72109, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Maui County Clerk'
+      },
+      {
+        name: 'Maui County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 55.7, candidate2: 44.3, totalVotes: 65432, winner: 'candidate1' },
+        candidates: ['Richard Bissen (I)', 'Mike Victorino (R)'],
+        source: 'Maui County Clerk'
+      },
+      {
+        name: 'Maui County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 57.3, candidate2: 42.7, totalVotes: 63210, winner: 'candidate1' },
+        candidates: ['Alice Lee (D)', 'Gabe Johnson (R)'],
+        source: 'Maui County Clerk'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Maui County - Governor',
+        type: 'Governor',
+        data: { candidate1: 62.1, candidate2: 37.9, totalVotes: 54321, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Maui County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 65.4, candidate2: 34.6, totalVotes: 52109, winner: 'candidate1' },
+        candidates: ['Brian Schatz (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Maui County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 54.8, candidate2: 45.2, totalVotes: 49876, winner: 'candidate1' },
+        candidates: ['Richard Bissen (I)', 'Mike Victorino (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Maui County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 56.9, candidate2: 43.1, totalVotes: 47654, winner: 'candidate1' },
+        candidates: ['Alice Lee (D)', 'Gabe Johnson (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Maui County - President',
+        type: 'President',
+        data: { candidate1: 63.4, candidate2: 35.6, totalVotes: 78765, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Maui County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 66.7, candidate2: 33.3, totalVotes: 76432, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Maui County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 56.2, candidate2: 43.8, totalVotes: 63210, winner: 'candidate1' },
+        candidates: ['Mike Victorino (R)', 'Richard Bissen (I)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Maui County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 58.5, candidate2: 41.5, totalVotes: 61098, winner: 'candidate1' },
+        candidates: ['Alice Lee (D)', 'Gabe Johnson (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ]
+  },
+  'Kauai': {
+    '2024': [
+      {
+        name: 'Kauai County - President',
+        type: 'President',
+        data: { candidate1: 64.2, candidate2: 34.8, totalVotes: 32109, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Kauai County Clerk'
+      },
+      {
+        name: 'Kauai County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 66.5, candidate2: 32.5, totalVotes: 31098, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Kauai County Clerk'
+      },
+      {
+        name: 'Kauai County - Governor',
+        type: 'Governor',
+        data: { candidate1: 62.8, candidate2: 36.2, totalVotes: 29876, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Kauai County Clerk'
+      },
+      {
+        name: 'Kauai County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 59.3, candidate2: 40.7, totalVotes: 27654, winner: 'candidate1' },
+        candidates: ['Derek Kawakami (D)', 'Mel Rapozo (R)'],
+        source: 'Kauai County Clerk'
+      },
+      {
+        name: 'Kauai County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 60.7, candidate2: 39.3, totalVotes: 26543, winner: 'candidate1' },
+        candidates: ['Arryl Kaneshiro (D)', 'Arthur Brun (R)'],
+        source: 'Kauai County Clerk'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Kauai County - Governor',
+        type: 'Governor',
+        data: { candidate1: 65.3, candidate2: 34.7, totalVotes: 23456, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kauai County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 68.1, candidate2: 31.9, totalVotes: 22345, winner: 'candidate1' },
+        candidates: ['Brian Schatz (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kauai County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 58.7, candidate2: 41.3, totalVotes: 21234, winner: 'candidate1' },
+        candidates: ['Derek Kawakami (D)', 'Mel Rapozo (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kauai County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 59.4, candidate2: 40.6, totalVotes: 20123, winner: 'candidate1' },
+        candidates: ['Arryl Kaneshiro (D)', 'Arthur Brun (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Kauai County - President',
+        type: 'President',
+        data: { candidate1: 66.8, candidate2: 32.2, totalVotes: 34567, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kauai County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 69.2, candidate2: 30.8, totalVotes: 33456, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kauai County - Mayor',
+        type: 'Mayor',
+        data: { candidate1: 60.1, candidate2: 39.9, totalVotes: 28765, winner: 'candidate1' },
+        candidates: ['Derek Kawakami (D)', 'Mel Rapozo (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kauai County - Council Chair',
+        type: 'Treasurer',
+        data: { candidate1: 61.5, candidate2: 38.5, totalVotes: 27654, winner: 'candidate1' },
+        candidates: ['Arryl Kaneshiro (D)', 'Arthur Brun (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ]
+  },
+  'Kalawao': {
+    '2024': [
+      {
+        name: 'Kalawao County - President',
+        type: 'President',
+        data: { candidate1: 72.0, candidate2: 28.0, totalVotes: 25, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kalawao County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 76.0, candidate2: 24.0, totalVotes: 25, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kalawao County - Governor',
+        type: 'Governor',
+        data: { candidate1: 68.0, candidate2: 32.0, totalVotes: 25, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Kalawao County - Governor',
+        type: 'Governor',
+        data: { candidate1: 70.8, candidate2: 29.2, totalVotes: 24, winner: 'candidate1' },
+        candidates: ['Josh Green (D)', 'Duke Aiona (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kalawao County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 75.0, candidate2: 25.0, totalVotes: 24, winner: 'candidate1' },
+        candidates: ['Brian Schatz (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Kalawao County - President',
+        type: 'President',
+        data: { candidate1: 73.9, candidate2: 26.1, totalVotes: 23, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Hawaii Office of Elections'
+      },
+      {
+        name: 'Kalawao County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 78.3, candidate2: 21.7, totalVotes: 23, winner: 'candidate1' },
+        candidates: ['Mazie Hirono (D)', 'Bob McDermott (R)'],
+        source: 'Hawaii Office of Elections'
+      }
+    ]
+  }
+};
+
+const RHODE_ISLAND_COUNTY_ELECTIONS = {
+  'Providence': {
+    '2024': [
+      {
+        name: 'Providence County - President',
+        type: 'President',
+        data: { candidate1: 59.8, candidate2: 38.2, totalVotes: 387654, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 61.4, candidate2: 36.6, totalVotes: 376543, winner: 'candidate1' },
+        candidates: ['Sheldon Whitehouse (D)', 'Patricia Morgan (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - Governor',
+        type: 'Governor',
+        data: { candidate1: 58.2, candidate2: 40.8, totalVotes: 365432, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - Mayor (Providence)',
+        type: 'Mayor',
+        data: { candidate1: 62.7, candidate2: 37.3, totalVotes: 98765, winner: 'candidate1' },
+        candidates: ['Brett Smiley (D)', 'Gonzalo Cuervo (I)'],
+        source: 'Providence City Hall'
+      },
+      {
+        name: 'Providence County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 60.3, candidate2: 39.7, totalVotes: 354321, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Providence County - Governor',
+        type: 'Governor',
+        data: { candidate1: 57.8, candidate2: 40.2, totalVotes: 298765, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 65.4, candidate2: 32.6, totalVotes: 287654, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 59.7, candidate2: 38.3, totalVotes: 276543, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - Mayor (Providence)',
+        type: 'Mayor',
+        data: { candidate1: 61.2, candidate2: 38.8, totalVotes: 87654, winner: 'candidate1' },
+        candidates: ['Brett Smiley (D)', 'Gonzalo Cuervo (I)'],
+        source: 'Providence City Hall'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Providence County - President',
+        type: 'President',
+        data: { candidate1: 59.4, candidate2: 39.1, totalVotes: 398765, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 66.8, candidate2: 31.2, totalVotes: 387654, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - Governor',
+        type: 'Governor',
+        data: { candidate1: 58.9, candidate2: 39.1, totalVotes: 376543, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Providence County - Mayor (Providence)',
+        type: 'Mayor',
+        data: { candidate1: 63.4, candidate2: 36.6, totalVotes: 76543, winner: 'candidate1' },
+        candidates: ['Jorge Elorza (D)', 'Vincent Cirelli (I)'],
+        source: 'Providence City Hall'
+      }
+    ]
+  },
+  'Kent': {
+    '2024': [
+      {
+        name: 'Kent County - President',
+        type: 'President',
+        data: { candidate1: 54.2, candidate2: 44.8, totalVotes: 87654, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 56.7, candidate2: 41.3, totalVotes: 84321, winner: 'candidate1' },
+        candidates: ['Sheldon Whitehouse (D)', 'Patricia Morgan (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - Governor',
+        type: 'Governor',
+        data: { candidate1: 52.8, candidate2: 46.2, totalVotes: 82109, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - Mayor (Warwick)',
+        type: 'Mayor',
+        data: { candidate1: 48.3, candidate2: 51.7, totalVotes: 43210, winner: 'candidate2' },
+        candidates: ['Frank Picozzi (D)', 'Sue Stenhouse (R)'],
+        source: 'Warwick City Hall'
+      },
+      {
+        name: 'Kent County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 55.1, candidate2: 44.9, totalVotes: 79876, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Kent County - Governor',
+        type: 'Governor',
+        data: { candidate1: 51.9, candidate2: 47.1, totalVotes: 65432, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 58.4, candidate2: 39.6, totalVotes: 63210, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 54.7, candidate2: 43.3, totalVotes: 61098, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - Mayor (Warwick)',
+        type: 'Mayor',
+        data: { candidate1: 49.6, candidate2: 50.4, totalVotes: 38765, winner: 'candidate2' },
+        candidates: ['Frank Picozzi (D)', 'Sue Stenhouse (R)'],
+        source: 'Warwick City Hall'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Kent County - President',
+        type: 'President',
+        data: { candidate1: 52.8, candidate2: 45.7, totalVotes: 89765, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 59.2, candidate2: 38.8, totalVotes: 87432, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - Governor',
+        type: 'Governor',
+        data: { candidate1: 53.6, candidate2: 44.4, totalVotes: 85210, winner: 'candidate1' },
+        candidates: ['Gina Raimondo (D)', 'Allan Fung (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Kent County - Mayor (Warwick)',
+        type: 'Mayor',
+        data: { candidate1: 51.2, candidate2: 48.8, totalVotes: 41098, winner: 'candidate1' },
+        candidates: ['Frank Picozzi (D)', 'Sue Stenhouse (R)'],
+        source: 'Warwick City Hall'
+      }
+    ]
+  },
+  'Washington': {
+    '2024': [
+      {
+        name: 'Washington County - President',
+        type: 'President',
+        data: { candidate1: 56.3, candidate2: 42.7, totalVotes: 76543, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 58.9, candidate2: 39.1, totalVotes: 74321, winner: 'candidate1' },
+        candidates: ['Sheldon Whitehouse (D)', 'Patricia Morgan (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - Governor',
+        type: 'Governor',
+        data: { candidate1: 55.1, candidate2: 43.9, totalVotes: 72109, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - Mayor (South Kingstown)',
+        type: 'Mayor',
+        data: { candidate1: 52.7, candidate2: 47.3, totalVotes: 18765, winner: 'candidate1' },
+        candidates: ['Maria Bucci (D)', 'Robert Davis (R)'],
+        source: 'South Kingstown Town Hall'
+      },
+      {
+        name: 'Washington County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 57.4, candidate2: 42.6, totalVotes: 69876, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Washington County - Governor',
+        type: 'Governor',
+        data: { candidate1: 54.3, candidate2: 44.7, totalVotes: 54321, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 60.8, candidate2: 37.2, totalVotes: 52109, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 56.9, candidate2: 41.1, totalVotes: 49876, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - Mayor (South Kingstown)',
+        type: 'Mayor',
+        data: { candidate1: 51.4, candidate2: 48.6, totalVotes: 16543, winner: 'candidate1' },
+        candidates: ['Maria Bucci (D)', 'Robert Davis (R)'],
+        source: 'South Kingstown Town Hall'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Washington County - President',
+        type: 'President',
+        data: { candidate1: 55.7, candidate2: 42.8, totalVotes: 78765, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 61.4, candidate2: 36.6, totalVotes: 76432, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - Governor',
+        type: 'Governor',
+        data: { candidate1: 56.8, candidate2: 41.2, totalVotes: 74210, winner: 'candidate1' },
+        candidates: ['Gina Raimondo (D)', 'Allan Fung (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Washington County - Mayor (South Kingstown)',
+        type: 'Mayor',
+        data: { candidate1: 53.9, candidate2: 46.1, totalVotes: 17654, winner: 'candidate1' },
+        candidates: ['Maria Bucci (D)', 'Robert Davis (R)'],
+        source: 'South Kingstown Town Hall'
+      }
+    ]
+  },
+  'Bristol': {
+    '2024': [
+      {
+        name: 'Bristol County - President',
+        type: 'President',
+        data: { candidate1: 57.8, candidate2: 41.2, totalVotes: 32109, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 59.4, candidate2: 38.6, totalVotes: 31098, winner: 'candidate1' },
+        candidates: ['Sheldon Whitehouse (D)', 'Patricia Morgan (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - Governor',
+        type: 'Governor',
+        data: { candidate1: 56.2, candidate2: 42.8, totalVotes: 29876, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - Mayor (Bristol)',
+        type: 'Mayor',
+        data: { candidate1: 54.7, candidate2: 45.3, totalVotes: 12345, winner: 'candidate1' },
+        candidates: ['Ellen Martins (D)', 'John Saviano (R)'],
+        source: 'Bristol Town Hall'
+      },
+      {
+        name: 'Bristol County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 58.1, candidate2: 41.9, totalVotes: 28765, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Bristol County - Governor',
+        type: 'Governor',
+        data: { candidate1: 55.6, candidate2: 43.4, totalVotes: 23456, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 61.2, candidate2: 36.8, totalVotes: 22345, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 57.8, candidate2: 40.2, totalVotes: 21234, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - Mayor (Bristol)',
+        type: 'Mayor',
+        data: { candidate1: 53.1, candidate2: 46.9, totalVotes: 10987, winner: 'candidate1' },
+        candidates: ['Ellen Martins (D)', 'John Saviano (R)'],
+        source: 'Bristol Town Hall'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Bristol County - President',
+        type: 'President',
+        data: { candidate1: 56.9, candidate2: 41.8, totalVotes: 34567, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 62.3, candidate2: 35.7, totalVotes: 33456, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - Governor',
+        type: 'Governor',
+        data: { candidate1: 57.4, candidate2: 40.6, totalVotes: 32345, winner: 'candidate1' },
+        candidates: ['Gina Raimondo (D)', 'Allan Fung (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Bristol County - Mayor (Bristol)',
+        type: 'Mayor',
+        data: { candidate1: 55.8, candidate2: 44.2, totalVotes: 11765, winner: 'candidate1' },
+        candidates: ['Ellen Martins (D)', 'John Saviano (R)'],
+        source: 'Bristol Town Hall'
+      }
+    ]
+  },
+  'Newport': {
+    '2024': [
+      {
+        name: 'Newport County - President',
+        type: 'President',
+        data: { candidate1: 58.6, candidate2: 40.4, totalVotes: 54321, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 60.2, candidate2: 37.8, totalVotes: 52109, winner: 'candidate1' },
+        candidates: ['Sheldon Whitehouse (D)', 'Patricia Morgan (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - Governor',
+        type: 'Governor',
+        data: { candidate1: 57.3, candidate2: 41.7, totalVotes: 49876, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - Mayor (Newport)',
+        type: 'Mayor',
+        data: { candidate1: 55.9, candidate2: 44.1, totalVotes: 15432, winner: 'candidate1' },
+        candidates: ['Xay Khamsyvoravong (D)', 'John Florez (R)'],
+        source: 'Newport City Hall'
+      },
+      {
+        name: 'Newport County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 59.1, candidate2: 40.9, totalVotes: 47654, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      }
+    ],
+    '2022': [
+      {
+        name: 'Newport County - Governor',
+        type: 'Governor',
+        data: { candidate1: 56.7, candidate2: 42.3, totalVotes: 38765, winner: 'candidate1' },
+        candidates: ['Dan McKee (D)', 'Ashley Kalus (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 62.4, candidate2: 35.6, totalVotes: 36543, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - Attorney General',
+        type: 'Treasurer',
+        data: { candidate1: 58.8, candidate2: 39.2, totalVotes: 34321, winner: 'candidate1' },
+        candidates: ['Peter Neronha (D)', 'Dawson Hodgson (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - Mayor (Newport)',
+        type: 'Mayor',
+        data: { candidate1: 54.2, candidate2: 45.8, totalVotes: 13210, winner: 'candidate1' },
+        candidates: ['Xay Khamsyvoravong (D)', 'John Florez (R)'],
+        source: 'Newport City Hall'
+      }
+    ],
+    '2020': [
+      {
+        name: 'Newport County - President',
+        type: 'President',
+        data: { candidate1: 57.8, candidate2: 40.9, totalVotes: 56789, winner: 'candidate1' },
+        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 63.1, candidate2: 34.9, totalVotes: 54567, winner: 'candidate1' },
+        candidates: ['Jack Reed (D)', 'Allen Waters (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - Governor',
+        type: 'Governor',
+        data: { candidate1: 58.4, candidate2: 39.6, totalVotes: 52345, winner: 'candidate1' },
+        candidates: ['Gina Raimondo (D)', 'Allan Fung (R)'],
+        source: 'Rhode Island Board of Elections'
+      },
+      {
+        name: 'Newport County - Mayor (Newport)',
+        type: 'Mayor',
+        data: { candidate1: 56.7, candidate2: 43.3, totalVotes: 14098, winner: 'candidate1' },
+        candidates: ['Jeanne-Marie Napolitano (D)', 'John Florez (R)'],
+        source: 'Newport City Hall'
+      }
+    ]
+  }
+};
+
 const HomeScreen = () => {
   console.log('HomeScreen component starting...');
   
   try {
-    const { getScaledFontSize, colors: accessibilityColors } = useAccessibility();
+    const { getScaledFontSize, getAccessibleColors } = useAccessibility();
     console.log('useAccessibility hook successful');
     
     // Fallback colors in case accessibilityColors is undefined
-    const safeColors = accessibilityColors || {
-      background: '#ffffff',
-      text: '#000000',
-      primary: '#007AFF',
-      secondary: '#666666',
-      border: '#cccccc'
-    };
+    const safeColors = getAccessibleColors();
     
-    const [selectedYear, setSelectedYear] = useState('2024');
-    const [location, setLocation] = useState(null);
+    const [selectedYear, setSelectedYear] = useState(2024);
+    const [selectedCounty, setSelectedCounty] = useState('');
+    const [selectedState, setSelectedState] = useState('');
     const [locationName, setLocationName] = useState('');
+    const [location, setLocation] = useState(null);
     const [isManualLocation, setIsManualLocation] = useState(false);
     const [locationModalVisible, setLocationModalVisible] = useState(false);
+    const [stateModalVisible, setStateModalVisible] = useState(false);
+    const [countyModalVisible, setCountyModalVisible] = useState(false);
     const [selectedElection, setSelectedElection] = useState(null);
     const [sourceModalVisible, setSourceModalVisible] = useState(false);
-    const [selectedCounty, setSelectedCounty] = useState(null);
 
     console.log('State variables initialized');
 
@@ -831,7 +1782,19 @@ const HomeScreen = () => {
       }
     }, []);
 
-    // Detect county from GPS coordinates
+    // Reset county when state changes
+    useEffect(() => {
+      if (selectedState && selectedCounty) {
+        // Check if current county belongs to the selected state
+        const countiesInState = getCountiesForState(selectedState);
+        const isCountyInState = countiesInState.some(county => county.key === selectedCounty);
+        if (!isCountyInState) {
+          setSelectedCounty('');
+          setLocationName('');
+        }
+      }
+    }, [selectedState]);
+
     const detectCountyFromCoordinates = (latitude, longitude) => {
       const countyBounds = {
         // Texas Counties with approximate boundaries
@@ -887,6 +1850,48 @@ const HomeScreen = () => {
         'Sussex': { 
           minLat: 38.5, maxLat: 38.9, 
           minLng: -75.5, maxLng: -75.1 
+        },
+        // Hawaii Counties
+        'Honolulu': { 
+          minLat: 21.2, maxLat: 21.7, 
+          minLng: -158.0, maxLng: -157.4 
+        },
+        'Hawaii': { 
+          minLat: 19.5, maxLat: 20.3, 
+          minLng: -156.0, maxLng: -154.8 
+        },
+        'Maui': { 
+          minLat: 20.5, maxLat: 21.2, 
+          minLng: -157.0, maxLng: -155.8 
+        },
+        'Kauai': { 
+          minLat: 21.9, maxLat: 22.2, 
+          minLng: -160.0, maxLng: -159.2 
+        },
+        'Kalawao': { 
+          minLat: 21.2, maxLat: 21.3, 
+          minLng: -156.9, maxLng: -156.7 
+        },
+        // Rhode Island Counties
+        'Providence': { 
+          minLat: 41.7, maxLat: 42.0, 
+          minLng: -71.7, maxLng: -71.3 
+        },
+        'Kent': { 
+          minLat: 41.5, maxLat: 41.8, 
+          minLng: -71.7, maxLng: -71.3 
+        },
+        'Washington': { 
+          minLat: 41.3, maxLat: 41.6, 
+          minLng: -71.7, maxLng: -71.3 
+        },
+        'Bristol': { 
+          minLat: 41.7, maxLat: 42.0, 
+          minLng: -71.3, maxLng: -70.9 
+        },
+        'Newport': { 
+          minLat: 41.3, maxLat: 41.6, 
+          minLng: -71.3, maxLng: -70.9 
         }
       };
 
@@ -901,7 +1906,6 @@ const HomeScreen = () => {
       return null; // No county detected
     };
 
-    // Get current location and auto-detect county
     const getCurrentLocation = async () => {
       try {
         const { status } = await Location.requestForegroundPermissionsAsync();
@@ -925,7 +1929,8 @@ const HomeScreen = () => {
         if (detectedCounty) {
           // Auto-select the detected county
           setSelectedCounty(detectedCounty);
-          const state = TEXAS_COUNTY_ELECTIONS[detectedCounty] ? 'Texas' : 'Delaware';
+          const state = TEXAS_COUNTY_ELECTIONS[detectedCounty] ? 'Texas' : DELAWARE_COUNTY_ELECTIONS[detectedCounty] ? 'Delaware' : HAWAII_COUNTY_ELECTIONS[detectedCounty] ? 'Hawaii' : RHODE_ISLAND_COUNTY_ELECTIONS[detectedCounty] ? 'Rhode Island' : 'Unknown';
+          setSelectedState(state);
           setLocationName(`Current Location: ${state} - ${detectedCounty} County`);
           console.log(`Auto-detected county: ${detectedCounty} in ${state}`);
         } else {
@@ -952,10 +1957,12 @@ const HomeScreen = () => {
     const getLocalElections = () => {
       if (!selectedCounty) return [];
       
-      // Combine Texas and Delaware county data
+      // Combine Texas, Delaware, Hawaii, and Rhode Island county data
       const ALL_COUNTY_ELECTIONS = {
         ...TEXAS_COUNTY_ELECTIONS,
-        ...DELAWARE_COUNTY_ELECTIONS
+        ...DELAWARE_COUNTY_ELECTIONS,
+        ...HAWAII_COUNTY_ELECTIONS,
+        ...RHODE_ISLAND_COUNTY_ELECTIONS
       };
       
       if (!ALL_COUNTY_ELECTIONS || typeof ALL_COUNTY_ELECTIONS !== 'object') {
@@ -979,35 +1986,58 @@ const HomeScreen = () => {
       ];
     };
 
-    const getAvailableCounties = () => {
-      // Combine Texas and Delaware county data
+    const getAvailableStates = () => {
+      // Get unique states from the county data
       const ALL_COUNTY_ELECTIONS = {
         ...TEXAS_COUNTY_ELECTIONS,
-        ...DELAWARE_COUNTY_ELECTIONS
+        ...DELAWARE_COUNTY_ELECTIONS,
+        ...HAWAII_COUNTY_ELECTIONS,
+        ...RHODE_ISLAND_COUNTY_ELECTIONS
       };
       
-      if (!ALL_COUNTY_ELECTIONS || typeof ALL_COUNTY_ELECTIONS !== 'object') {
-        console.error('County elections data is not defined or not an object:', ALL_COUNTY_ELECTIONS);
-        return [];
+      const stateMap = {};
+      Object.keys(ALL_COUNTY_ELECTIONS).forEach(county => {
+        const state = TEXAS_COUNTY_ELECTIONS[county] ? 'Texas' : DELAWARE_COUNTY_ELECTIONS[county] ? 'Delaware' : HAWAII_COUNTY_ELECTIONS[county] ? 'Hawaii' : RHODE_ISLAND_COUNTY_ELECTIONS[county] ? 'Rhode Island' : 'Unknown';
+        if (!stateMap[state]) {
+          stateMap[state] = state;
+        }
+      });
+      
+      return Object.keys(stateMap).sort().map(state => ({
+        key: state,
+        label: state
+      }));
+    };
+
+    const getCountiesForState = (state) => {
+      if (!state) return [];
+      
+      // Access state-specific data directly to avoid key conflicts
+      let stateElections = {};
+      switch (state) {
+        case 'Texas':
+          stateElections = TEXAS_COUNTY_ELECTIONS;
+          break;
+        case 'Delaware':
+          stateElections = DELAWARE_COUNTY_ELECTIONS;
+          break;
+        case 'Hawaii':
+          stateElections = HAWAII_COUNTY_ELECTIONS;
+          break;
+        case 'Rhode Island':
+          stateElections = RHODE_ISLAND_COUNTY_ELECTIONS;
+          break;
+        default:
+          return [];
       }
       
-      const counties = Object.keys(ALL_COUNTY_ELECTIONS);
-      return counties.map(county => {
-        // Determine state based on which data source contains the county
-        const state = TEXAS_COUNTY_ELECTIONS[county] ? 'Texas' : 'Delaware';
-        return {
-          key: county,
-          label: `${state} - ${county} County`,
-          state: state,
-          coordinates: getCountyCoordinates(county)
-        };
-      }).sort((a, b) => {
-        // Sort by state first, then by county name
-        if (a.state !== b.state) {
-          return a.state.localeCompare(b.state);
-        }
-        return a.key.localeCompare(b.key);
-      });
+      const counties = Object.keys(stateElections);
+      
+      return counties.map(county => ({
+        key: county,
+        label: `${county} County`,
+        coordinates: getCountyCoordinates(county)
+      })).sort((a, b) => a.key.localeCompare(b.key));
     };
 
     const getCountyCoordinates = (county) => {
@@ -1026,7 +2056,19 @@ const HomeScreen = () => {
         // Delaware Counties
         'New Castle': { latitude: 39.6, longitude: -75.6 }, // Wilmington area
         'Kent': { latitude: 39.1, longitude: -75.5 }, // Dover area
-        'Sussex': { latitude: 38.7, longitude: -75.3 } // Georgetown area
+        'Sussex': { latitude: 38.7, longitude: -75.3 }, // Georgetown area
+        // Hawaii Counties
+        'Honolulu': { latitude: 21.3, longitude: -157.8 }, // Honolulu area
+        'Hawaii': { latitude: 19.7, longitude: -155.5 }, // Hilo area
+        'Maui': { latitude: 20.8, longitude: -156.5 }, // Kahului area
+        'Kauai': { latitude: 22.0, longitude: -159.5 }, // Lihue area
+        'Kalawao': { latitude: 21.2, longitude: -156.9 }, // Kalawao area
+        // Rhode Island Counties
+        'Providence': { latitude: 41.8, longitude: -71.5 }, // Providence area
+        'Kent': { latitude: 41.6, longitude: -71.5 }, // Warwick area
+        'Washington': { latitude: 41.4, longitude: -71.5 }, // South Kingstown area
+        'Bristol': { latitude: 41.7, longitude: -71.3 }, // Bristol area
+        'Newport': { latitude: 41.4, longitude: -71.3 }, // Newport area
       };
       return countyCoords[county] || { latitude: 39.0, longitude: -75.5 }; // Default to Delaware center
     };
@@ -1542,7 +2584,7 @@ const HomeScreen = () => {
             {/* Location Display */}
             <TouchableOpacity 
               style={styles.locationContainer}
-              onPress={() => setLocationModalVisible(true)}
+              onPress={() => setStateModalVisible(true)}
             >
               <Ionicons name="location-outline" size={16} color={safeColors.primary} />
               <Text style={[styles.locationText, { 
@@ -1569,6 +2611,25 @@ const HomeScreen = () => {
             />
           </View>
 
+          {/* State Selection */}
+          <View style={styles.dropdownContainer}>
+            <Text style={[styles.sectionTitle, { 
+              fontSize: getScaledFontSize(16), 
+              color: safeColors.text 
+            }]}>
+              State:
+            </Text>
+            <TouchableOpacity
+              style={[styles.countyDropdown, { borderColor: safeColors.border }]}
+              onPress={() => setStateModalVisible(true)}
+            >
+              <Text style={[styles.countyDropdownText, { color: safeColors.text }]}>
+                {selectedState || 'Select State'}
+              </Text>
+              <Ionicons name="chevron-down" size={20} color={safeColors.primary} />
+            </TouchableOpacity>
+          </View>
+
           {/* County Selection */}
           <View style={styles.dropdownContainer}>
             <Text style={[styles.sectionTitle, { 
@@ -1579,7 +2640,7 @@ const HomeScreen = () => {
             </Text>
             <TouchableOpacity
               style={[styles.countyDropdown, { borderColor: safeColors.border }]}
-              onPress={() => setLocationModalVisible(true)}
+              onPress={() => setCountyModalVisible(true)}
             >
               <Text style={[styles.countyDropdownText, { color: safeColors.text }]}>
                 {selectedCounty ? `${selectedCounty} County` : 'Select County'}
@@ -1701,7 +2762,7 @@ const HomeScreen = () => {
 
         {/* Sticky Footer */}
         {selectedCounty && (
-          <View style={[styles.stickyFooter, { backgroundColor: safeColors.background, borderTopColor: safeColors.border }]}>
+          <View style={[styles.stickyFooter, { backgroundColor: '#FFFFFF', borderTopColor: safeColors.border }]}>
             <View style={styles.footerContent}>
               <Text style={[styles.footerTitle, { fontSize: getScaledFontSize(14), color: safeColors.text }]}>
                 Next Election in {selectedCounty} County
@@ -1716,12 +2777,67 @@ const HomeScreen = () => {
           </View>
         )}
         
-        {/* County Modal */}
+        {/* State Modal */}
         <Modal
-          visible={locationModalVisible}
+          visible={stateModalVisible}
           transparent={true}
           animationType="slide"
-          onRequestClose={() => setLocationModalVisible(false)}
+          onRequestClose={() => setStateModalVisible(false)}
+        >
+          <View style={styles.modalOverlay}>
+            <View style={[styles.modalContent, { backgroundColor: safeColors.background }]}>
+              <Text style={[styles.modalTitle, { 
+                fontSize: getScaledFontSize(18), 
+                color: safeColors.text 
+              }]}>
+                Select Your State
+              </Text>
+              
+              <ScrollView style={styles.modalScrollView}>
+                {getAvailableStates().map((state, index) => (
+                  <TouchableOpacity
+                    key={index}
+                    style={[
+                      styles.modalCountyItem,
+                      { borderBottomColor: safeColors.border }
+                    ]}
+                    onPress={() => {
+                      setSelectedState(state.key);
+                      setStateModalVisible(false);
+                      setCountyModalVisible(true);
+                    }}
+                  >
+                    <Text style={[styles.modalCountyText, { 
+                      fontSize: getScaledFontSize(16), 
+                      color: safeColors.text 
+                    }]}>
+                      {state.label}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+              
+              <TouchableOpacity
+                style={[styles.modalCloseButton, { backgroundColor: safeColors.primary }]}
+                onPress={() => setStateModalVisible(false)}
+              >
+                <Text style={[styles.modalCloseText, { 
+                  fontSize: getScaledFontSize(16), 
+                  color: '#FFFFFF' 
+                }]}>
+                  Close
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+
+        {/* County Modal */}
+        <Modal
+          visible={countyModalVisible}
+          transparent={true}
+          animationType="slide"
+          onRequestClose={() => setCountyModalVisible(false)}
         >
           <View style={styles.modalOverlay}>
             <View style={[styles.modalContent, { backgroundColor: safeColors.background }]}>
@@ -1733,7 +2849,7 @@ const HomeScreen = () => {
               </Text>
               
               <ScrollView style={styles.modalScrollView}>
-                {getAvailableCounties().map((county, index) => (
+                {getCountiesForState(selectedState).map((county, index) => (
                   <TouchableOpacity
                     key={index}
                     style={[
@@ -1742,8 +2858,7 @@ const HomeScreen = () => {
                     ]}
                     onPress={() => {
                       setSelectedCounty(county.key);
-                      setLocationName(`${county.key} County`);
-                      setLocationModalVisible(false);
+                      setCountyModalVisible(false);
                     }}
                   >
                     <Text style={[styles.modalCountyText, { 
@@ -1758,7 +2873,7 @@ const HomeScreen = () => {
               
               <TouchableOpacity
                 style={[styles.modalCloseButton, { backgroundColor: safeColors.primary }]}
-                onPress={() => setLocationModalVisible(false)}
+                onPress={() => setCountyModalVisible(false)}
               >
                 <Text style={[styles.modalCloseText, { 
                   fontSize: getScaledFontSize(16), 

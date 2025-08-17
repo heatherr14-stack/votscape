@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   modalOverlay: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -118,9 +118,9 @@ const styles = StyleSheet.create({
     maxHeight: '70%',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.3,
     shadowRadius: 8,
-    elevation: 8,
+    elevation: 10,
   },
   modalHeader: {
     flexDirection: 'row',
@@ -128,12 +128,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     borderBottomWidth: 1,
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
   },
   modalTitle: {
     fontWeight: 'bold',
   },
   optionsList: {
     maxHeight: 400,
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
   },
   optionItem: {
     flexDirection: 'row',
@@ -141,8 +145,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     borderBottomWidth: 1,
+    minHeight: 56,
   },
   optionText: {
+    flex: 1,
+    fontWeight: '500',
+  },
+  dropdownOptions: {
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 0,
+    minHeight: 44,
+    borderTopWidth: 0,
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+  },
+  dropdownOption: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 12,
+    minHeight: 44,
+    borderBottomWidth: 1,
+  },
+  dropdownOptionText: {
     flex: 1,
   },
 });
@@ -163,9 +189,9 @@ export default function SuggestionForm() {
     submitterEmail: ''
   });
   
-  const [showPlatformModal, setShowPlatformModal] = useState(false);
-  const [showCategoryModal, setShowCategoryModal] = useState(false);
-  const [showPoliticalLeanModal, setShowPoliticalLeanModal] = useState(false);
+  const [showPlatformDropdown, setShowPlatformDropdown] = useState(false);
+  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const [showPoliticalLeanDropdown, setShowPoliticalLeanDropdown] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (field, value) => {
@@ -237,24 +263,47 @@ export default function SuggestionForm() {
     }
   };
 
-  const renderDropdownModal = (visible, setVisible, options, selectedValue, onSelect, title) => (
-    <Modal
-      visible={visible}
-      transparent={true}
-      animationType="fade"
-      onRequestClose={() => setVisible(false)}
-    >
-      <View style={styles.modalOverlay}>
-        <View style={[styles.modalContent, { backgroundColor: accessibleColors.background }]}>
-          <View style={[styles.modalHeader, { borderBottomColor: accessibleColors.border }]}>
-            <Text style={[styles.modalTitle, { fontSize: getScaledFontSize(18), color: accessibleColors.text }]}>
-              {title}
-            </Text>
-            <TouchableOpacity onPress={() => setVisible(false)}>
-              <Ionicons name="close" size={24} color={accessibleColors.text} />
-            </TouchableOpacity>
-          </View>
-          <ScrollView style={styles.optionsList}>
+  const renderInlineDropdown = (options, selectedValue, onSelect, placeholder, isOpen, setIsOpen) => (
+    <View>
+      <TouchableOpacity
+        style={[
+          styles.dropdown,
+          { 
+            backgroundColor: accessibleColors.background,
+            borderColor: accessibleColors.border,
+            borderBottomLeftRadius: isOpen ? 0 : 8,
+            borderBottomRightRadius: isOpen ? 0 : 8,
+          }
+        ]}
+        onPress={() => setIsOpen(!isOpen)}
+      >
+        <Text style={[
+          styles.dropdownText,
+          { 
+            fontSize: getScaledFontSize(16),
+            color: selectedValue ? accessibleColors.text : accessibleColors.secondary 
+          }
+        ]}>
+          {selectedValue ? (typeof selectedValue === 'string' ? selectedValue : 
+            options.find(opt => (typeof opt === 'string' ? opt : opt.value) === selectedValue)?.label || selectedValue) 
+            : placeholder}
+        </Text>
+        <Ionicons 
+          name={isOpen ? "chevron-up" : "chevron-down"} 
+          size={20} 
+          color={accessibleColors.text} 
+        />
+      </TouchableOpacity>
+      
+      {isOpen && (
+        <View style={[
+          styles.dropdownOptions,
+          { 
+            backgroundColor: accessibleColors.background,
+            borderColor: accessibleColors.border,
+          }
+        ]}>
+          <ScrollView style={{ maxHeight: 200 }} nestedScrollEnabled={true}>
             {options.map((option, index) => {
               const optionValue = typeof option === 'string' ? option : option.value;
               const optionLabel = typeof option === 'string' ? option : option.label;
@@ -264,19 +313,24 @@ export default function SuggestionForm() {
                 <TouchableOpacity
                   key={index}
                   style={[
-                    styles.optionItem,
-                    { borderBottomColor: accessibleColors.border },
-                    isSelected && { backgroundColor: accessibleColors.primaryLight }
+                    styles.dropdownOption,
+                    { 
+                      backgroundColor: isSelected ? accessibleColors.primaryLight : accessibleColors.background,
+                      borderBottomColor: accessibleColors.border 
+                    }
                   ]}
                   onPress={() => {
                     onSelect(optionValue);
-                    setVisible(false);
+                    setIsOpen(false);
                   }}
                 >
                   <Text style={[
-                    styles.optionText,
-                    { fontSize: getScaledFontSize(16), color: accessibleColors.text },
-                    isSelected && { color: accessibleColors.primary, fontWeight: '600' }
+                    styles.dropdownOptionText,
+                    { 
+                      fontSize: getScaledFontSize(16), 
+                      color: isSelected ? accessibleColors.primary : accessibleColors.text,
+                      fontWeight: isSelected ? '600' : '400'
+                    }
                   ]}>
                     {optionLabel}
                   </Text>
@@ -288,8 +342,8 @@ export default function SuggestionForm() {
             })}
           </ScrollView>
         </View>
-      </View>
-    </Modal>
+      )}
+    </View>
   );
 
   return (
@@ -321,86 +375,38 @@ export default function SuggestionForm() {
 
             {/* Platform */}
             <View style={styles.inputGroup}>
-              <Text style={[styles.label, { fontSize: getScaledFontSize(14), color: accessibleColors.text }]}>
-                Platform *
-              </Text>
-              <TouchableOpacity
-                style={[
-                  styles.dropdown,
-                  { 
-                    backgroundColor: accessibleColors.background,
-                    borderColor: accessibleColors.border
-                  }
-                ]}
-                onPress={() => setShowPlatformModal(true)}
-              >
-                <Text style={[
-                  styles.dropdownText,
-                  { 
-                    fontSize: getScaledFontSize(16),
-                    color: formData.platform ? accessibleColors.text : accessibleColors.secondary
-                  }
-                ]}>
-                  {formData.platform || 'Select Platform'}
-                </Text>
-                <Ionicons name="chevron-down" size={20} color={accessibleColors.secondary} />
-              </TouchableOpacity>
+              {renderInlineDropdown(
+                PLATFORMS,
+                formData.platform,
+                (value) => handleInputChange('platform', value),
+                'Select Platform',
+                showPlatformDropdown,
+                setShowPlatformDropdown
+              )}
             </View>
 
             {/* Category */}
             <View style={styles.inputGroup}>
-              <Text style={[styles.label, { fontSize: getScaledFontSize(14), color: accessibleColors.text }]}>
-                Category *
-              </Text>
-              <TouchableOpacity
-                style={[
-                  styles.dropdown,
-                  { 
-                    backgroundColor: accessibleColors.background,
-                    borderColor: accessibleColors.border
-                  }
-                ]}
-                onPress={() => setShowCategoryModal(true)}
-              >
-                <Text style={[
-                  styles.dropdownText,
-                  { 
-                    fontSize: getScaledFontSize(16),
-                    color: formData.category ? accessibleColors.text : accessibleColors.secondary
-                  }
-                ]}>
-                  {formData.category || 'Select Category'}
-                </Text>
-                <Ionicons name="chevron-down" size={20} color={accessibleColors.secondary} />
-              </TouchableOpacity>
+              {renderInlineDropdown(
+                CATEGORIES,
+                formData.category,
+                (value) => handleInputChange('category', value),
+                'Select Category',
+                showCategoryDropdown,
+                setShowCategoryDropdown
+              )}
             </View>
 
             {/* Political Lean (Optional) */}
             <View style={styles.inputGroup}>
-              <Text style={[styles.label, { fontSize: getScaledFontSize(14), color: accessibleColors.text }]}>
-                Political Lean (if applicable)
-              </Text>
-              <TouchableOpacity
-                style={[
-                  styles.dropdown,
-                  { 
-                    backgroundColor: accessibleColors.background,
-                    borderColor: accessibleColors.border
-                  }
-                ]}
-                onPress={() => setShowPoliticalLeanModal(true)}
-              >
-                <Text style={[
-                  styles.dropdownText,
-                  { 
-                    fontSize: getScaledFontSize(16),
-                    color: formData.politicalLean ? accessibleColors.text : accessibleColors.secondary
-                  }
-                ]}>
-                  {POLITICAL_LEANS.find(lean => lean.value === formData.politicalLean)?.label || 'Select Political Lean (Optional)'}
-                </Text>
-                <Ionicons name="chevron-down" size={20} color={accessibleColors.secondary} />
-              </TouchableOpacity>
+              {renderInlineDropdown(
+                POLITICAL_LEANS,
+                formData.politicalLean,
+                (value) => handleInputChange('politicalLean', value),
+                'Select Political Lean (Optional)',
+                showPoliticalLeanDropdown,
+                setShowPoliticalLeanDropdown
+              )}
             </View>
 
             {/* Description */}
@@ -496,34 +502,6 @@ export default function SuggestionForm() {
           </View>
         </View>
       </ScrollView>
-
-      {/* Modals */}
-      {renderDropdownModal(
-        showPlatformModal,
-        setShowPlatformModal,
-        PLATFORMS,
-        formData.platform,
-        (value) => handleInputChange('platform', value),
-        'Select Platform'
-      )}
-
-      {renderDropdownModal(
-        showCategoryModal,
-        setShowCategoryModal,
-        CATEGORIES,
-        formData.category,
-        (value) => handleInputChange('category', value),
-        'Select Category'
-      )}
-
-      {renderDropdownModal(
-        showPoliticalLeanModal,
-        setShowPoliticalLeanModal,
-        POLITICAL_LEANS,
-        formData.politicalLean,
-        (value) => handleInputChange('politicalLean', value),
-        'Select Political Lean'
-      )}
     </>
   );
 }
