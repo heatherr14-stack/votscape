@@ -104,13 +104,6 @@ export default function ElectionDropdown({
         {!compact && (
           <View style={styles.dropdownText}>
             <Text style={[
-              styles.dropdownLabel,
-              { fontSize: getScaledFontSize(12) },
-              disabled && styles.disabledText
-            ]}>
-              Election Year
-            </Text>
-            <Text style={[
               styles.dropdownValue,
               { fontSize: getScaledFontSize(16) },
               disabled && styles.disabledText
@@ -291,12 +284,6 @@ const styles = StyleSheet.create({
   },
   dropdownText: {
     flex: 1,
-  },
-  dropdownLabel: {
-    color: colors.textSecondary,
-    marginBottom: 2,
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
   },
   dropdownValue: {
     color: colors.textPrimary,

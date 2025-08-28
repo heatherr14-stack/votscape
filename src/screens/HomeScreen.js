@@ -2589,7 +2589,7 @@ const HomeScreen = () => {
               <Ionicons name="location-outline" size={16} color={safeColors.primary} />
               <Text style={[styles.locationText, { 
                 fontSize: getScaledFontSize(14), 
-                color: safeColors.text 
+                color: '#FFFFFF' 
               }]}>
                 {locationName || 'Tap to set location'}
               </Text>
