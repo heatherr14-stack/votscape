@@ -67,7 +67,7 @@ const ELECTION_OPTIONS = [
 ];
 
 export default function ElectionDropdown({ 
-  selectedYear = '2020', 
+  selectedYear = '2024', 
   onYearChange,
   disabled = false,
   style = {},

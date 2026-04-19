@@ -29,8 +29,67 @@ export default function ResultsPanel({ selectedCounty, electionData }) {
     );
   }
 
-  const { results } = selectedCounty;
-  const { election } = electionData;
+  // Convert real election data format to expected format
+  const convertElectionData = (realData) => {
+    if (!realData) return null;
+    
+    const demPercentage = parseFloat(realData.dem_pct);
+    const repPercentage = parseFloat(realData.rep_pct);
+    const totalVotes = realData.total_votes;
+    const demVotes = realData.dem_votes;
+    const repVotes = realData.rep_votes;
+    
+    // Calculate other votes if any
+    const otherVotes = totalVotes - demVotes - repVotes;
+    const otherPercentage = otherVotes > 0 ? (otherVotes / totalVotes) * 100 : 0;
+    
+    return {
+      democrat: {
+        candidate: realData.dem_candidate,
+        votes: demVotes,
+        percentage: demPercentage
+      },
+      republican: {
+        candidate: realData.rep_candidate,
+        votes: repVotes,
+        percentage: repPercentage
+      },
+      other: otherVotes > 0 ? {
+        candidate: 'Various Candidates',
+        votes: otherVotes,
+        percentage: otherPercentage
+      } : null,
+      totalVotes: totalVotes,
+      winningParty: realData.winner === 'Democratic' ? 'democrat' : 'republican'
+    };
+  };
+
+  const results = convertElectionData(electionData);
+  
+  if (!results) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.emptyState}>
+          <Ionicons 
+            name="alert-circle-outline" 
+            size={48} 
+            color={colors.textLight} 
+          />
+          <Text style={styles.emptyTitle}>No Election Data</Text>
+          <Text style={styles.emptyDescription}>
+            Election data is not available for this county
+          </Text>
+        </View>
+      </View>
+    );
+  }
+
+  // Mock election info since we're focusing on 2024 data
+  const election = {
+    year: '2024',
+    type: 'Presidential',
+    date: '2024-11-05'
+  };
 
   // Format numbers with commas
   const formatNumber = (num) => {

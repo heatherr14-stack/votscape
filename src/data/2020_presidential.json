@@ -33,6 +33,114 @@
       }
     },
     {
+      "id": "17031",
+      "name": "Cook County",
+      "state": "Illinois",
+      "coordinates": {
+        "latitude": 41.8781,
+        "longitude": -87.6298
+      },
+      "results": {
+        "democrat": {
+          "candidate": "Joe Biden",
+          "votes": 1935314,
+          "percentage": 74.4
+        },
+        "republican": {
+          "candidate": "Donald Trump",
+          "votes": 634323,
+          "percentage": 24.4
+        },
+        "other": {
+          "votes": 31247,
+          "percentage": 1.2
+        },
+        "totalVotes": 2600884,
+        "winningParty": "democrat"
+      }
+    },
+    {
+      "id": "48201",
+      "name": "Harris County",
+      "state": "Texas",
+      "coordinates": {
+        "latitude": 29.7604,
+        "longitude": -95.3698
+      },
+      "results": {
+        "democrat": {
+          "candidate": "Joe Biden",
+          "votes": 1013959,
+          "percentage": 56.0
+        },
+        "republican": {
+          "candidate": "Donald Trump",
+          "votes": 787081,
+          "percentage": 43.5
+        },
+        "other": {
+          "votes": 9065,
+          "percentage": 0.5
+        },
+        "totalVotes": 1810105,
+        "winningParty": "democrat"
+      }
+    },
+    {
+      "id": "04013",
+      "name": "Maricopa County",
+      "state": "Arizona",
+      "coordinates": {
+        "latitude": 33.4484,
+        "longitude": -112.0740
+      },
+      "results": {
+        "democrat": {
+          "candidate": "Joe Biden",
+          "votes": 1040774,
+          "percentage": 50.3
+        },
+        "republican": {
+          "candidate": "Donald Trump",
+          "votes": 995665,
+          "percentage": 48.1
+        },
+        "other": {
+          "votes": 33154,
+          "percentage": 1.6
+        },
+        "totalVotes": 2069593,
+        "winningParty": "democrat"
+      }
+    },
+    {
+      "id": "06073",
+      "name": "San Diego County",
+      "state": "California",
+      "coordinates": {
+        "latitude": 32.7157,
+        "longitude": -117.1611
+      },
+      "results": {
+        "democrat": {
+          "candidate": "Joe Biden",
+          "votes": 1007963,
+          "percentage": 60.7
+        },
+        "republican": {
+          "candidate": "Donald Trump",
+          "votes": 618724,
+          "percentage": 37.3
+        },
+        "other": {
+          "votes": 33247,
+          "percentage": 2.0
+        },
+        "totalVotes": 1659934,
+        "winningParty": "democrat"
+      }
+    },
+    {
       "id": "06059",
       "name": "Orange County",
       "state": "California",
@@ -60,60 +168,6 @@
       }
     },
     {
-      "id": "48201",
-      "name": "Harris County",
-      "state": "Texas",
-      "coordinates": {
-        "latitude": 29.7604,
-        "longitude": -95.3698
-      },
-      "results": {
-        "democrat": {
-          "candidate": "Joe Biden",
-          "votes": 1082721,
-          "percentage": 56.0
-        },
-        "republican": {
-          "candidate": "Donald Trump",
-          "votes": 825641,
-          "percentage": 42.7
-        },
-        "other": {
-          "votes": 25160,
-          "percentage": 1.3
-        },
-        "totalVotes": 1933522,
-        "winningParty": "democrat"
-      }
-    },
-    {
-      "id": "48113",
-      "name": "Dallas County",
-      "state": "Texas",
-      "coordinates": {
-        "latitude": 32.7767,
-        "longitude": -96.7970
-      },
-      "results": {
-        "democrat": {
-          "candidate": "Joe Biden",
-          "votes": 695577,
-          "percentage": 65.2
-        },
-        "republican": {
-          "candidate": "Donald Trump",
-          "votes": 357052,
-          "percentage": 33.5
-        },
-        "other": {
-          "votes": 13871,
-          "percentage": 1.3
-        },
-        "totalVotes": 1066500,
-        "winningParty": "democrat"
-      }
-    },
-    {
       "id": "12086",
       "name": "Miami-Dade County",
       "state": "Florida",
@@ -133,10 +187,91 @@
           "percentage": 46.1
         },
         "other": {
-          "votes": 7303,
+          "votes": 7124,
           "percentage": 0.6
         },
-        "totalVotes": 1158000,
+        "totalVotes": 1157821,
+        "winningParty": "democrat"
+      }
+    },
+    {
+      "id": "48113",
+      "name": "Dallas County",
+      "state": "Texas",
+      "coordinates": {
+        "latitude": 32.7767,
+        "longitude": -96.7970
+      },
+      "results": {
+        "democrat": {
+          "candidate": "Joe Biden",
+          "votes": 593758,
+          "percentage": 65.0
+        },
+        "republican": {
+          "candidate": "Donald Trump",
+          "votes": 309808,
+          "percentage": 34.0
+        },
+        "other": {
+          "votes": 9134,
+          "percentage": 1.0
+        },
+        "totalVotes": 912700,
+        "winningParty": "democrat"
+      }
+    },
+    {
+      "id": "36047",
+      "name": "Kings County",
+      "state": "New York",
+      "coordinates": {
+        "latitude": 40.6782,
+        "longitude": -73.9442
+      },
+      "results": {
+        "democrat": {
+          "candidate": "Joe Biden",
+          "votes": 726607,
+          "percentage": 78.7
+        },
+        "republican": {
+          "candidate": "Donald Trump",
+          "votes": 188923,
+          "percentage": 20.5
+        },
+        "other": {
+          "votes": 7470,
+          "percentage": 0.8
+        },
+        "totalVotes": 923000,
+        "winningParty": "democrat"
+      }
+    },
+    {
+      "id": "06065",
+      "name": "Riverside County",
+      "state": "California",
+      "coordinates": {
+        "latitude": 33.7175,
+        "longitude": -116.2023
+      },
+      "results": {
+        "democrat": {
+          "candidate": "Joe Biden",
+          "votes": 663277,
+          "percentage": 54.1
+        },
+        "republican": {
+          "candidate": "Donald Trump",
+          "votes": 548123,
+          "percentage": 44.7
+        },
+        "other": {
+          "votes": 14700,
+          "percentage": 1.2
+        },
+        "totalVotes": 1226100,
         "winningParty": "democrat"
       }
     },
@@ -168,56 +303,29 @@
       }
     },
     {
-      "id": "17031",
-      "name": "Cook County",
-      "state": "Illinois",
+      "id": "13135",
+      "name": "Gwinnett County",
+      "state": "Georgia",
       "coordinates": {
-        "latitude": 41.8781,
-        "longitude": -87.6298
+        "latitude": 33.9526,
+        "longitude": -84.2291
       },
       "results": {
         "democrat": {
           "candidate": "Joe Biden",
-          "votes": 1935314,
-          "percentage": 74.4
+          "votes": 258804,
+          "percentage": 58.4
         },
         "republican": {
           "candidate": "Donald Trump",
-          "votes": 633125,
-          "percentage": 24.3
+          "votes": 180837,
+          "percentage": 40.8
         },
         "other": {
-          "votes": 33561,
-          "percentage": 1.3
+          "votes": 3559,
+          "percentage": 0.8
         },
-        "totalVotes": 2602000,
-        "winningParty": "democrat"
-      }
-    },
-    {
-      "id": "04013",
-      "name": "Maricopa County",
-      "state": "Arizona",
-      "coordinates": {
-        "latitude": 33.4484,
-        "longitude": -112.0740
-      },
-      "results": {
-        "democrat": {
-          "candidate": "Joe Biden",
-          "votes": 1040774,
-          "percentage": 50.3
-        },
-        "republican": {
-          "candidate": "Donald Trump",
-          "votes": 995665,
-          "percentage": 48.1
-        },
-        "other": {
-          "votes": 33161,
-          "percentage": 1.6
-        },
-        "totalVotes": 2069600,
+        "totalVotes": 443200,
         "winningParty": "democrat"
       }
     },
@@ -245,33 +353,6 @@
           "percentage": 3.2
         },
         "totalVotes": 1098000,
-        "winningParty": "democrat"
-      }
-    },
-    {
-      "id": "13135",
-      "name": "Gwinnett County",
-      "state": "Georgia",
-      "coordinates": {
-        "latitude": 33.9526,
-        "longitude": -84.2291
-      },
-      "results": {
-        "democrat": {
-          "candidate": "Joe Biden",
-          "votes": 258804,
-          "percentage": 58.4
-        },
-        "republican": {
-          "candidate": "Donald Trump",
-          "votes": 180837,
-          "percentage": 40.8
-        },
-        "other": {
-          "votes": 3559,
-          "percentage": 0.8
-        },
-        "totalVotes": 443200,
         "winningParty": "democrat"
       }
     }

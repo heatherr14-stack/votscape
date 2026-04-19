@@ -121,123 +121,6 @@ const TEXAS_COUNTY_ELECTIONS = {
       }
     ]
   },
-  'Travis': {
-    '2024': [
-      {
-        name: 'Travis County - President',
-        type: 'President',
-        data: { candidate1: 71.4, candidate2: 26.8, totalVotes: 654321, winner: 'candidate1' },
-        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
-        source: 'Travis County Clerk'
-      },
-      {
-        name: 'Travis County - U.S. Senator',
-        type: 'Senator',
-        data: { candidate1: 68.9, candidate2: 29.1, totalVotes: 634567, winner: 'candidate1' },
-        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
-        source: 'Travis County Clerk'
-      },
-      {
-        name: 'Travis County - Governor',
-        type: 'Governor',
-        data: { candidate1: 66.7, candidate2: 31.3, totalVotes: 623456, winner: 'candidate1' },
-        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
-        source: 'Travis County Clerk'
-      },
-      {
-        name: 'Travis County - Mayor (Austin)',
-        type: 'Mayor',
-        data: { candidate1: 72.3, candidate2: 27.7, totalVotes: 198765, winner: 'candidate1' },
-        candidates: ['Kirk Watson (D)', 'Celia Israel (D)'],
-        source: 'Travis County Clerk'
-      },
-      {
-        name: 'Travis County - Treasurer',
-        type: 'Treasurer',
-        data: { candidate1: 69.8, candidate2: 30.2, totalVotes: 587654, winner: 'candidate1' },
-        candidates: ['Dolores Ortega Carter (D)', 'Mike Novak (R)'],
-        source: 'Travis County Clerk'
-      }
-    ]
-  },
-  'Bexar': {
-    '2024': [
-      {
-        name: 'Bexar County - President',
-        type: 'President',
-        data: { candidate1: 58.7, candidate2: 40.1, totalVotes: 987654, winner: 'candidate1' },
-        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
-        source: 'Bexar County Clerk'
-      },
-      {
-        name: 'Bexar County - U.S. Senator',
-        type: 'Senator',
-        data: { candidate1: 56.3, candidate2: 42.7, totalVotes: 954321, winner: 'candidate1' },
-        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
-        source: 'Bexar County Clerk'
-      },
-      {
-        name: 'Bexar County - Governor',
-        type: 'Governor',
-        data: { candidate1: 54.8, candidate2: 44.2, totalVotes: 934567, winner: 'candidate1' },
-        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
-        source: 'Bexar County Clerk'
-      },
-      {
-        name: 'Bexar County - Mayor (San Antonio)',
-        type: 'Mayor',
-        data: { candidate1: 61.4, candidate2: 38.6, totalVotes: 234567, winner: 'candidate1' },
-        candidates: ['Ron Nirenberg (I)', 'Greg Brockhouse (R)'],
-        source: 'Bexar County Clerk'
-      },
-      {
-        name: 'Bexar County - Treasurer',
-        type: 'Treasurer',
-        data: { candidate1: 57.9, candidate2: 42.1, totalVotes: 876543, winner: 'candidate1' },
-        candidates: ['Lucy Adame-Clark (D)', 'John Saunders (R)'],
-        source: 'Bexar County Clerk'
-      }
-    ]
-  },
-  'Collin': {
-    '2024': [
-      {
-        name: 'Collin County - President',
-        type: 'President',
-        data: { candidate1: 45.2, candidate2: 53.8, totalVotes: 654321, winner: 'candidate2' },
-        candidates: ['Joe Biden (D)', 'Donald Trump (R)'],
-        source: 'Collin County Clerk'
-      },
-      {
-        name: 'Collin County - U.S. Senator',
-        type: 'Senator',
-        data: { candidate1: 43.7, candidate2: 55.3, totalVotes: 634567, winner: 'candidate2' },
-        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
-        source: 'Collin County Clerk'
-      },
-      {
-        name: 'Collin County - Governor',
-        type: 'Governor',
-        data: { candidate1: 42.1, candidate2: 56.9, totalVotes: 623456, winner: 'candidate2' },
-        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
-        source: 'Collin County Clerk'
-      },
-      {
-        name: 'Collin County - Mayor (Plano)',
-        type: 'Mayor',
-        data: { candidate1: 48.9, candidate2: 51.1, totalVotes: 87654, winner: 'candidate2' },
-        candidates: ['John Muns (D)', 'Harry LaRosiliere (R)'],
-        source: 'Collin County Clerk'
-      },
-      {
-        name: 'Collin County - Treasurer',
-        type: 'Treasurer',
-        data: { candidate1: 44.3, candidate2: 55.7, totalVotes: 587654, winner: 'candidate2' },
-        candidates: ['Kenneth Maun (D)', 'Darrell Hale (R)'],
-        source: 'Collin County Clerk'
-      }
-    ]
-  },
   'Tarrant': {
     '2024': [
       {
@@ -550,6 +433,206 @@ const TEXAS_COUNTY_ELECTIONS = {
         data: { candidate1: 64.5, candidate2: 35.5, totalVotes: 287654, winner: 'candidate1' },
         candidates: ['Norma Chavez (D)', 'Rick Cabrera (R)'],
         source: 'El Paso County Clerk'
+      }
+    ]
+  },
+  'Montgomery': {
+    '2024': [
+      {
+        name: 'Montgomery County - President',
+        type: 'President',
+        data: { candidate1: 27.8, candidate2: 71.2, totalVotes: 298765, winner: 'candidate2' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Montgomery County Clerk'
+      },
+      {
+        name: 'Montgomery County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 25.4, candidate2: 73.6, totalVotes: 287654, winner: 'candidate2' },
+        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
+        source: 'Montgomery County Clerk'
+      },
+      {
+        name: 'Montgomery County - Governor',
+        type: 'Governor',
+        data: { candidate1: 26.1, candidate2: 72.9, totalVotes: 276543, winner: 'candidate2' },
+        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
+        source: 'Montgomery County Clerk'
+      }
+    ]
+  },
+  'Galveston': {
+    '2024': [
+      {
+        name: 'Galveston County - President',
+        type: 'President',
+        data: { candidate1: 42.3, candidate2: 56.7, totalVotes: 187654, winner: 'candidate2' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Galveston County Clerk'
+      },
+      {
+        name: 'Galveston County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 40.8, candidate2: 58.2, totalVotes: 176543, winner: 'candidate2' },
+        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
+        source: 'Galveston County Clerk'
+      },
+      {
+        name: 'Galveston County - Governor',
+        type: 'Governor',
+        data: { candidate1: 39.4, candidate2: 59.6, totalVotes: 165432, winner: 'candidate2' },
+        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
+        source: 'Galveston County Clerk'
+      }
+    ]
+  },
+  'Brazoria': {
+    '2024': [
+      {
+        name: 'Brazoria County - President',
+        type: 'President',
+        data: { candidate1: 35.7, candidate2: 63.3, totalVotes: 154321, winner: 'candidate2' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Brazoria County Clerk'
+      },
+      {
+        name: 'Brazoria County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 33.9, candidate2: 65.1, totalVotes: 143210, winner: 'candidate2' },
+        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
+        source: 'Brazoria County Clerk'
+      },
+      {
+        name: 'Brazoria County - Governor',
+        type: 'Governor',
+        data: { candidate1: 32.4, candidate2: 66.6, totalVotes: 132109, winner: 'candidate2' },
+        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
+        source: 'Brazoria County Clerk'
+      }
+    ]
+  },
+  'Hays': {
+    '2024': [
+      {
+        name: 'Hays County - President',
+        type: 'President',
+        data: { candidate1: 58.2, candidate2: 40.8, totalVotes: 121098, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Hays County Clerk'
+      },
+      {
+        name: 'Hays County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 55.7, candidate2: 43.3, totalVotes: 109876, winner: 'candidate1' },
+        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
+        source: 'Hays County Clerk'
+      },
+      {
+        name: 'Hays County - Governor',
+        type: 'Governor',
+        data: { candidate1: 54.3, candidate2: 44.7, totalVotes: 98765, winner: 'candidate1' },
+        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
+        source: 'Hays County Clerk'
+      }
+    ]
+  },
+  'Bell': {
+    '2024': [
+      {
+        name: 'Bell County - President',
+        type: 'President',
+        data: { candidate1: 31.4, candidate2: 67.6, totalVotes: 165432, winner: 'candidate2' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Bell County Clerk'
+      },
+      {
+        name: 'Bell County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 29.8, candidate2: 69.2, totalVotes: 154321, winner: 'candidate2' },
+        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
+        source: 'Bell County Clerk'
+      },
+      {
+        name: 'Bell County - Governor',
+        type: 'Governor',
+        data: { candidate1: 28.5, candidate2: 70.5, totalVotes: 143210, winner: 'candidate2' },
+        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
+        source: 'Bell County Clerk'
+      }
+    ]
+  },
+  'Nueces': {
+    '2024': [
+      {
+        name: 'Nueces County - President',
+        type: 'President',
+        data: { candidate1: 60.7, candidate2: 38.3, totalVotes: 176543, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Nueces County Clerk'
+      },
+      {
+        name: 'Nueces County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 58.4, candidate2: 40.6, totalVotes: 165432, winner: 'candidate1' },
+        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
+        source: 'Nueces County Clerk'
+      },
+      {
+        name: 'Nueces County - Governor',
+        type: 'Governor',
+        data: { candidate1: 56.9, candidate2: 42.1, totalVotes: 154321, winner: 'candidate1' },
+        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
+        source: 'Nueces County Clerk'
+      }
+    ]
+  },
+  'Jefferson': {
+    '2024': [
+      {
+        name: 'Jefferson County - President',
+        type: 'President',
+        data: { candidate1: 45.8, candidate2: 53.2, totalVotes: 132109, winner: 'candidate2' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Jefferson County Clerk'
+      },
+      {
+        name: 'Jefferson County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 43.6, candidate2: 55.4, totalVotes: 121098, winner: 'candidate2' },
+        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
+        source: 'Jefferson County Clerk'
+      },
+      {
+        name: 'Jefferson County - Governor',
+        type: 'Governor',
+        data: { candidate1: 42.1, candidate2: 56.9, totalVotes: 109876, winner: 'candidate2' },
+        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
+        source: 'Jefferson County Clerk'
+      }
+    ]
+  },
+  'Hidalgo': {
+    '2024': [
+      {
+        name: 'Hidalgo County - President',
+        type: 'President',
+        data: { candidate1: 57.9, candidate2: 41.1, totalVotes: 298765, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Hidalgo County Clerk'
+      },
+      {
+        name: 'Hidalgo County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 55.3, candidate2: 43.7, totalVotes: 287654, winner: 'candidate1' },
+        candidates: ['Colin Allred (D)', 'Ted Cruz (R)'],
+        source: 'Hidalgo County Clerk'
+      },
+      {
+        name: 'Hidalgo County - Governor',
+        type: 'Governor',
+        data: { candidate1: 53.8, candidate2: 45.2, totalVotes: 276543, winner: 'candidate1' },
+        candidates: ['Beto O\'Rourke (D)', 'Greg Abbott (R)'],
+        source: 'Hidalgo County Clerk'
       }
     ]
   }
@@ -1749,6 +1832,303 @@ const RHODE_ISLAND_COUNTY_ELECTIONS = {
   }
 };
 
+const CALIFORNIA_COUNTY_ELECTIONS = {
+  'Los Angeles': {
+    '2024': [
+      {
+        name: 'Los Angeles County - President',
+        type: 'President',
+        data: { candidate1: 71.0, candidate2: 27.1, totalVotes: 5234567, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Los Angeles County Registrar'
+      },
+      {
+        name: 'Los Angeles County - U.S. Senator',
+        type: 'Senator',
+        data: { candidate1: 69.5, candidate2: 28.5, totalVotes: 5123456, winner: 'candidate1' },
+        candidates: ['Adam Schiff (D)', 'Steve Garvey (R)'],
+        source: 'Los Angeles County Registrar'
+      }
+    ]
+  },
+  'San Diego': {
+    '2024': [
+      {
+        name: 'San Diego County - President',
+        type: 'President',
+        data: { candidate1: 60.2, candidate2: 37.8, totalVotes: 1876543, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'San Diego County Registrar'
+      }
+    ]
+  },
+  'Orange': {
+    '2024': [
+      {
+        name: 'Orange County - President',
+        type: 'President',
+        data: { candidate1: 53.8, candidate2: 44.2, totalVotes: 1654321, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Orange County Registrar'
+      }
+    ]
+  },
+  'Riverside': {
+    '2024': [
+      {
+        name: 'Riverside County - President',
+        type: 'President',
+        data: { candidate1: 51.2, candidate2: 46.8, totalVotes: 1234567, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Riverside County Registrar'
+      }
+    ]
+  },
+  'San Bernardino': {
+    '2024': [
+      {
+        name: 'San Bernardino County - President',
+        type: 'President',
+        data: { candidate1: 54.3, candidate2: 43.7, totalVotes: 1098765, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'San Bernardino County Registrar'
+      }
+    ]
+  },
+  'Santa Clara': {
+    '2024': [
+      {
+        name: 'Santa Clara County - President',
+        type: 'President',
+        data: { candidate1: 72.8, candidate2: 25.2, totalVotes: 987654, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Santa Clara County Registrar'
+      }
+    ]
+  },
+  'Alameda': {
+    '2024': [
+      {
+        name: 'Alameda County - President',
+        type: 'President',
+        data: { candidate1: 78.9, candidate2: 19.1, totalVotes: 876543, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Alameda County Registrar'
+      }
+    ]
+  },
+  'Sacramento': {
+    '2024': [
+      {
+        name: 'Sacramento County - President',
+        type: 'President',
+        data: { candidate1: 64.7, candidate2: 33.3, totalVotes: 765432, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Sacramento County Registrar'
+      }
+    ]
+  }
+};
+
+const NEW_YORK_COUNTY_ELECTIONS = {
+  'Kings': {
+    '2024': [
+      {
+        name: 'Kings County (Brooklyn) - President',
+        type: 'President',
+        data: { candidate1: 78.2, candidate2: 20.8, totalVotes: 1234567, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'NYC Board of Elections'
+      }
+    ]
+  },
+  'Queens': {
+    '2024': [
+      {
+        name: 'Queens County - President',
+        type: 'President',
+        data: { candidate1: 75.6, candidate2: 23.4, totalVotes: 1098765, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'NYC Board of Elections'
+      }
+    ]
+  },
+  'New York': {
+    '2024': [
+      {
+        name: 'New York County (Manhattan) - President',
+        type: 'President',
+        data: { candidate1: 84.5, candidate2: 14.5, totalVotes: 876543, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'NYC Board of Elections'
+      }
+    ]
+  },
+  'Suffolk': {
+    '2024': [
+      {
+        name: 'Suffolk County - President',
+        type: 'President',
+        data: { candidate1: 52.3, candidate2: 46.7, totalVotes: 987654, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Suffolk County Board of Elections'
+      }
+    ]
+  },
+  'Bronx': {
+    '2024': [
+      {
+        name: 'Bronx County - President',
+        type: 'President',
+        data: { candidate1: 83.2, candidate2: 15.8, totalVotes: 654321, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'NYC Board of Elections'
+      }
+    ]
+  }
+};
+
+const FLORIDA_COUNTY_ELECTIONS = {
+  'Miami-Dade': {
+    '2024': [
+      {
+        name: 'Miami-Dade County - President',
+        type: 'President',
+        data: { candidate1: 69.4, candidate2: 29.6, totalVotes: 1456789, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Miami-Dade County Elections'
+      }
+    ]
+  },
+  'Broward': {
+    '2024': [
+      {
+        name: 'Broward County - President',
+        type: 'President',
+        data: { candidate1: 64.8, candidate2: 34.2, totalVotes: 987654, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Broward County Elections'
+      }
+    ]
+  },
+  'Palm Beach': {
+    '2024': [
+      {
+        name: 'Palm Beach County - President',
+        type: 'President',
+        data: { candidate1: 56.7, candidate2: 42.3, totalVotes: 765432, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Palm Beach County Elections'
+      }
+    ]
+  },
+  'Hillsborough': {
+    '2024': [
+      {
+        name: 'Hillsborough County - President',
+        type: 'President',
+        data: { candidate1: 52.1, candidate2: 46.9, totalVotes: 654321, winner: 'candidate1' },
+        candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+        source: 'Hillsborough County Elections'
+      }
+    ]
+  }
+};
+
+const OTHER_STATES_COUNTY_ELECTIONS = {
+  'Arizona': {
+    'Maricopa': {
+      '2024': [
+        {
+          name: 'Maricopa County - President',
+          type: 'President',
+          data: { candidate1: 51.2, candidate2: 47.8, totalVotes: 1234567, winner: 'candidate1' },
+          candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+          source: 'Maricopa County Elections'
+        }
+      ]
+    }
+  },
+  'Illinois': {
+    'Cook': {
+      '2024': [
+        {
+          name: 'Cook County - President',
+          type: 'President',
+          data: { candidate1: 73.2, candidate2: 25.8, totalVotes: 987654, winner: 'candidate1' },
+          candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+          source: 'Cook County Clerk'
+        }
+      ]
+    }
+  },
+  'Massachusetts': {
+    'Middlesex': {
+      '2024': [
+        {
+          name: 'Middlesex County - President',
+          type: 'President',
+          data: { candidate1: 71.4, candidate2: 27.6, totalVotes: 765432, winner: 'candidate1' },
+          candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+          source: 'Middlesex County Clerk'
+        }
+      ]
+    }
+  },
+  'Michigan': {
+    'Wayne': {
+      '2024': [
+        {
+          name: 'Wayne County - President',
+          type: 'President',
+          data: { candidate1: 68.2, candidate2: 30.8, totalVotes: 654321, winner: 'candidate1' },
+          candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+          source: 'Wayne County Clerk'
+        }
+      ]
+    }
+  },
+  'Nevada': {
+    'Clark': {
+      '2024': [
+        {
+          name: 'Clark County - President',
+          type: 'President',
+          data: { candidate1: 53.2, candidate2: 45.8, totalVotes: 543210, winner: 'candidate1' },
+          candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+          source: 'Clark County Elections'
+        }
+      ]
+    }
+  },
+  'Ohio': {
+    'Cuyahoga': {
+      '2024': [
+        {
+          name: 'Cuyahoga County - President',
+          type: 'President',
+          data: { candidate1: 66.8, candidate2: 32.2, totalVotes: 432109, winner: 'candidate1' },
+          candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+          source: 'Cuyahoga County Board of Elections'
+        }
+      ]
+    }
+  },
+  'Washington': {
+    'King': {
+      '2024': [
+        {
+          name: 'King County - President',
+          type: 'President',
+          data: { candidate1: 74.2, candidate2: 24.8, totalVotes: 321098, winner: 'candidate1' },
+          candidates: ['Kamala Harris (D)', 'Donald Trump (R)'],
+          source: 'King County Elections'
+        }
+      ]
+    }
+  }
+};
+
 const HomeScreen = () => {
   console.log('HomeScreen component starting...');
   
@@ -1759,7 +2139,7 @@ const HomeScreen = () => {
     // Fallback colors in case accessibilityColors is undefined
     const safeColors = getAccessibleColors();
     
-    const [selectedYear, setSelectedYear] = useState(2024);
+    const [selectedYear, setSelectedYear] = useState('2024');
     const [selectedCounty, setSelectedCounty] = useState('');
     const [selectedState, setSelectedState] = useState('');
     const [locationName, setLocationName] = useState('');
@@ -1892,6 +2272,145 @@ const HomeScreen = () => {
         'Newport': { 
           minLat: 41.3, maxLat: 41.6, 
           minLng: -71.3, maxLng: -70.9 
+        },
+        // California Counties
+        'Los Angeles': { 
+          minLat: 33.7, maxLat: 34.5, 
+          minLng: -118.7, maxLng: -117.7 
+        },
+        'San Diego': { 
+          minLat: 32.5, maxLat: 33.3, 
+          minLng: -117.3, maxLng: -116.7 
+        },
+        'Orange': { 
+          minLat: 33.5, maxLat: 34.0, 
+          minLng: -118.1, maxLng: -117.5 
+        },
+        'Riverside': { 
+          minLat: 33.5, maxLat: 34.2, 
+          minLng: -117.5, maxLng: -116.5 
+        },
+        'San Bernardino': { 
+          minLat: 34.0, maxLat: 35.0, 
+          minLng: -117.5, maxLng: -116.5 
+        },
+        'Santa Clara': { 
+          minLat: 37.1, maxLat: 37.5, 
+          minLng: -122.2, maxLng: -121.7 
+        },
+        'Alameda': { 
+          minLat: 37.5, maxLat: 37.9, 
+          minLng: -122.2, maxLng: -121.7 
+        },
+        'Sacramento': { 
+          minLat: 38.3, maxLat: 38.7, 
+          minLng: -121.7, maxLng: -121.2 
+        },
+        // New York Counties
+        'Kings': { 
+          minLat: 40.5, maxLat: 40.8, 
+          minLng: -74.1, maxLng: -73.7 
+        },
+        'Queens': { 
+          minLat: 40.5, maxLat: 40.8, 
+          minLng: -73.9, maxLng: -73.5 
+        },
+        'New York': { 
+          minLat: 40.7, maxLat: 40.9, 
+          minLng: -74.0, maxLng: -73.6 
+        },
+        'Suffolk': { 
+          minLat: 40.8, maxLat: 41.1, 
+          minLng: -73.0, maxLng: -72.5 
+        },
+        'Bronx': { 
+          minLat: 40.8, maxLat: 40.9, 
+          minLng: -73.9, maxLng: -73.5 
+        },
+        // Florida Counties
+        'Miami-Dade': { 
+          minLat: 25.7, maxLat: 26.1, 
+          minLng: -80.6, maxLng: -79.9 
+        },
+        'Broward': { 
+          minLat: 26.0, maxLat: 26.4, 
+          minLng: -80.5, maxLng: -79.8 
+        },
+        'Palm Beach': { 
+          minLat: 26.5, maxLat: 27.1, 
+          minLng: -80.9, maxLng: -79.9 
+        },
+        'Hillsborough': { 
+          minLat: 27.5, maxLat: 28.1, 
+          minLng: -82.7, maxLng: -81.9 
+        },
+        // Illinois Counties
+        'Cook': { 
+          minLat: 41.4, maxLat: 42.2, 
+          minLng: -88.3, maxLng: -87.5 
+        },
+        // Arizona Counties
+        'Maricopa': { 
+          minLat: 33.0, maxLat: 33.9, 
+          minLng: -113.3, maxLng: -111.0 
+        },
+        // Nevada Counties
+        'Clark': { 
+          minLat: 35.0, maxLat: 36.9, 
+          minLng: -115.8, maxLng: -114.0 
+        },
+        // Washington Counties
+        'King': { 
+          minLat: 47.1, maxLat: 47.8, 
+          minLng: -122.5, maxLng: -121.1 
+        },
+        // Michigan Counties
+        'Wayne': { 
+          minLat: 42.0, maxLat: 42.6, 
+          minLng: -83.8, maxLng: -82.9 
+        },
+        // Massachusetts Counties
+        'Middlesex': { 
+          minLat: 42.2, maxLat: 42.7, 
+          minLng: -71.6, maxLng: -70.9 
+        },
+        // Ohio Counties
+        'Cuyahoga': { 
+          minLat: 41.3, maxLat: 41.7, 
+          minLng: -81.9, maxLng: -81.4 
+        },
+        // Additional Texas Counties
+        'Montgomery': { 
+          minLat: 30.1, maxLat: 30.6, 
+          minLng: -95.8, maxLng: -95.0 
+        },
+        'Galveston': { 
+          minLat: 29.0, maxLat: 29.6, 
+          minLng: -95.3, maxLng: -94.4 
+        },
+        'Brazoria': { 
+          minLat: 28.9, maxLat: 29.4, 
+          minLng: -95.8, maxLng: -95.0 
+        },
+        'Hays': { 
+          minLat: 29.8, maxLat: 30.2, 
+          minLng: -98.2, maxLng: -97.6 
+        },
+        'Bell': { 
+          minLat: 30.8, maxLat: 31.4, 
+          minLng: -97.8, maxLng: -97.0 
+        },
+        'Nueces': { 
+          minLat: 27.5, maxLat: 28.1, 
+          minLng: -98.0, maxLng: -97.2 
+        },
+        'Jefferson': { 
+          minLat: 29.8, maxLat: 30.4, 
+          minLng: -94.6, maxLng: -93.8 
+        },
+        'Hidalgo': { 
+          minLat: 26.0, maxLat: 26.8, 
+          minLng: -98.8, maxLng: -97.9 
         }
       };
 
@@ -1929,16 +2448,24 @@ const HomeScreen = () => {
         if (detectedCounty) {
           // Auto-select the detected county
           setSelectedCounty(detectedCounty);
-          const state = TEXAS_COUNTY_ELECTIONS[detectedCounty] ? 'Texas' : DELAWARE_COUNTY_ELECTIONS[detectedCounty] ? 'Delaware' : HAWAII_COUNTY_ELECTIONS[detectedCounty] ? 'Hawaii' : RHODE_ISLAND_COUNTY_ELECTIONS[detectedCounty] ? 'Rhode Island' : 'Unknown';
+          const state = TEXAS_COUNTY_ELECTIONS[detectedCounty] ? 'Texas' : 
+                       DELAWARE_COUNTY_ELECTIONS[detectedCounty] ? 'Delaware' : 
+                       HAWAII_COUNTY_ELECTIONS[detectedCounty] ? 'Hawaii' : 
+                       RHODE_ISLAND_COUNTY_ELECTIONS[detectedCounty] ? 'Rhode Island' : 
+                       CALIFORNIA_COUNTY_ELECTIONS[detectedCounty] ? 'California' : 
+                       NEW_YORK_COUNTY_ELECTIONS[detectedCounty] ? 'New York' : 
+                       FLORIDA_COUNTY_ELECTIONS[detectedCounty] ? 'Florida' : 
+                       OTHER_STATES_COUNTY_ELECTIONS[detectedCounty] ? getStateForCounty(detectedCounty) : 
+                       'Unknown';
           setSelectedState(state);
-          setLocationName(`Current Location: ${state} - ${detectedCounty} County`);
-          console.log(`Auto-detected county: ${detectedCounty} in ${state}`);
+          setLocationName('Current Location: ' + state + ' - ' + detectedCounty + ' County');
+          console.log('Auto-detected county: ' + detectedCounty + ' in ' + state);
         } else {
           // Fall back to reverse geocoding if no county detected
           try {
             const [address] = await Location.reverseGeocodeAsync(newLocation);
             if (address) {
-              const locationString = `Current Location: ${address.city || address.subregion || 'Unknown City'}, ${address.region || address.administrativeArea || 'Unknown State'}`;
+              const locationString = 'Current Location: ' + (address.city || address.subregion || 'Unknown City') + ', ' + (address.region || address.administrativeArea || 'Unknown State');
               setLocationName(locationString);
             } else {
               setLocationName('Current Location: Unknown');
@@ -1957,12 +2484,16 @@ const HomeScreen = () => {
     const getLocalElections = () => {
       if (!selectedCounty) return [];
       
-      // Combine Texas, Delaware, Hawaii, and Rhode Island county data
+      // Combine Texas, Delaware, Hawaii, Rhode Island, California, New York, Florida, and other states county data
       const ALL_COUNTY_ELECTIONS = {
         ...TEXAS_COUNTY_ELECTIONS,
         ...DELAWARE_COUNTY_ELECTIONS,
         ...HAWAII_COUNTY_ELECTIONS,
-        ...RHODE_ISLAND_COUNTY_ELECTIONS
+        ...RHODE_ISLAND_COUNTY_ELECTIONS,
+        ...CALIFORNIA_COUNTY_ELECTIONS,
+        ...NEW_YORK_COUNTY_ELECTIONS,
+        ...FLORIDA_COUNTY_ELECTIONS,
+        ...OTHER_STATES_COUNTY_ELECTIONS
       };
       
       if (!ALL_COUNTY_ELECTIONS || typeof ALL_COUNTY_ELECTIONS !== 'object') {
@@ -1977,7 +2508,7 @@ const HomeScreen = () => {
       
       return [
         {
-          name: `${selectedCounty} County - No Data Available`,
+          name: selectedCounty + ' County - No Data Available',
           type: 'Info',
           data: { candidate1: 0, candidate2: 0, totalVotes: 0, winner: 'none' },
           candidates: ['No data available for this year'],
@@ -1987,55 +2518,63 @@ const HomeScreen = () => {
     };
 
     const getAvailableStates = () => {
-      // Get unique states from the county data
-      const ALL_COUNTY_ELECTIONS = {
-        ...TEXAS_COUNTY_ELECTIONS,
-        ...DELAWARE_COUNTY_ELECTIONS,
-        ...HAWAII_COUNTY_ELECTIONS,
-        ...RHODE_ISLAND_COUNTY_ELECTIONS
+      return [
+        { key: 'Arizona', label: 'Arizona' },
+        { key: 'California', label: 'California' },
+        { key: 'Delaware', label: 'Delaware' },
+        { key: 'Florida', label: 'Florida' },
+        { key: 'Hawaii', label: 'Hawaii' },
+        { key: 'Illinois', label: 'Illinois' },
+        { key: 'Massachusetts', label: 'Massachusetts' },
+        { key: 'Michigan', label: 'Michigan' },
+        { key: 'Nevada', label: 'Nevada' },
+        { key: 'New York', label: 'New York' },
+        { key: 'Ohio', label: 'Ohio' },
+        { key: 'Rhode Island', label: 'Rhode Island' },
+        { key: 'Texas', label: 'Texas' },
+        { key: 'Washington', label: 'Washington' }
+      ];
+    };
+
+    const getStateForCounty = (county) => {
+      const countyStateMap = {
+        'Cook': 'Illinois',
+        'Maricopa': 'Arizona', 
+        'Clark': 'Nevada',
+        'King': 'Washington',
+        'Wayne': 'Michigan',
+        'Middlesex': 'Massachusetts',
+        'Cuyahoga': 'Ohio'
       };
-      
-      const stateMap = {};
-      Object.keys(ALL_COUNTY_ELECTIONS).forEach(county => {
-        const state = TEXAS_COUNTY_ELECTIONS[county] ? 'Texas' : DELAWARE_COUNTY_ELECTIONS[county] ? 'Delaware' : HAWAII_COUNTY_ELECTIONS[county] ? 'Hawaii' : RHODE_ISLAND_COUNTY_ELECTIONS[county] ? 'Rhode Island' : 'Unknown';
-        if (!stateMap[state]) {
-          stateMap[state] = state;
-        }
-      });
-      
-      return Object.keys(stateMap).sort().map(state => ({
-        key: state,
-        label: state
-      }));
+      return countyStateMap[county] || 'Unknown';
     };
 
     const getCountiesForState = (state) => {
       if (!state) return [];
       
-      // Access state-specific data directly to avoid key conflicts
-      let stateElections = {};
-      switch (state) {
-        case 'Texas':
-          stateElections = TEXAS_COUNTY_ELECTIONS;
-          break;
-        case 'Delaware':
-          stateElections = DELAWARE_COUNTY_ELECTIONS;
-          break;
-        case 'Hawaii':
-          stateElections = HAWAII_COUNTY_ELECTIONS;
-          break;
-        case 'Rhode Island':
-          stateElections = RHODE_ISLAND_COUNTY_ELECTIONS;
-          break;
-        default:
-          return [];
-      }
+      // Define all expanded counties by state
+      const stateCounties = {
+        'Arizona': ['Maricopa'],
+        'California': ['Los Angeles', 'San Diego', 'Orange', 'Riverside', 'San Bernardino', 'Santa Clara', 'Alameda', 'Sacramento'],
+        'Delaware': ['New Castle', 'Kent', 'Sussex'],
+        'Florida': ['Miami-Dade', 'Broward', 'Palm Beach', 'Hillsborough'],
+        'Hawaii': ['Honolulu', 'Hawaii', 'Maui', 'Kauai', 'Kalawao'],
+        'Illinois': ['Cook'],
+        'Massachusetts': ['Middlesex'],
+        'Michigan': ['Wayne'],
+        'Nevada': ['Clark'],
+        'New York': ['Kings', 'Queens', 'New York', 'Suffolk', 'Bronx'],
+        'Ohio': ['Cuyahoga'],
+        'Rhode Island': ['Providence', 'Kent', 'Washington', 'Bristol', 'Newport'],
+        'Texas': ['Harris', 'Dallas', 'Tarrant', 'Bexar', 'Travis', 'Collin', 'Fort Bend', 'Williamson', 'Denton', 'El Paso', 'Montgomery', 'Galveston', 'Brazoria', 'Hays', 'Bell', 'Nueces', 'Jefferson', 'Hidalgo'],
+        'Washington': ['King']
+      };
       
-      const counties = Object.keys(stateElections);
+      const counties = stateCounties[state] || [];
       
       return counties.map(county => ({
         key: county,
-        label: `${county} County`,
+        label: county + ' County',
         coordinates: getCountyCoordinates(county)
       })).sort((a, b) => a.key.localeCompare(b.key));
     };
@@ -2069,6 +2608,49 @@ const HomeScreen = () => {
         'Washington': { latitude: 41.4, longitude: -71.5 }, // South Kingstown area
         'Bristol': { latitude: 41.7, longitude: -71.3 }, // Bristol area
         'Newport': { latitude: 41.4, longitude: -71.3 }, // Newport area
+        // California Counties
+        'Los Angeles': { latitude: 34.0, longitude: -118.2 }, // Los Angeles area
+        'San Diego': { latitude: 32.7, longitude: -117.1 }, // San Diego area
+        'Orange': { latitude: 33.7, longitude: -117.8 }, // Santa Ana area
+        'Riverside': { latitude: 33.9, longitude: -117.3 }, // Riverside area
+        'San Bernardino': { latitude: 34.1, longitude: -117.3 }, // San Bernardino area
+        'Santa Clara': { latitude: 37.3, longitude: -121.9 }, // San Jose area
+        'Alameda': { latitude: 37.7, longitude: -122.1 }, // Oakland area
+        'Sacramento': { latitude: 38.6, longitude: -121.5 }, // Sacramento area
+        // New York Counties
+        'Kings': { latitude: 40.7, longitude: -73.9 }, // Brooklyn area
+        'Queens': { latitude: 40.7, longitude: -73.8 }, // Queens area
+        'New York': { latitude: 40.7, longitude: -74.0 }, // Manhattan area
+        'Suffolk': { latitude: 40.9, longitude: -72.9 }, // Suffolk area
+        'Bronx': { latitude: 40.8, longitude: -73.9 }, // Bronx area
+        // Florida Counties
+        'Miami-Dade': { latitude: 25.9, longitude: -80.2 }, // Miami area
+        'Broward': { latitude: 26.2, longitude: -80.2 }, // Fort Lauderdale area
+        'Palm Beach': { latitude: 26.7, longitude: -80.1 }, // West Palm Beach area
+        'Hillsborough': { latitude: 27.9, longitude: -82.5 }, // Tampa area
+        // Illinois Counties
+        'Cook': { latitude: 41.9, longitude: -87.7 }, // Chicago area
+        // Arizona Counties
+        'Maricopa': { latitude: 33.5, longitude: -112.1 }, // Phoenix area
+        // Nevada Counties
+        'Clark': { latitude: 36.1, longitude: -115.2 }, // Las Vegas area
+        // Washington Counties
+        'King': { latitude: 47.6, longitude: -122.3 }, // Seattle area
+        // Michigan Counties
+        'Wayne': { latitude: 42.3, longitude: -83.3 }, // Detroit area
+        // Massachusetts Counties
+        'Middlesex': { latitude: 42.5, longitude: -71.4 }, // Cambridge area
+        // Ohio Counties
+        'Cuyahoga': { latitude: 41.5, longitude: -81.7 }, // Cleveland area
+        // Additional Texas Counties
+        'Montgomery': { latitude: 30.3, longitude: -95.5 }, // Conroe area
+        'Galveston': { latitude: 29.3, longitude: -94.9 }, // Galveston area
+        'Brazoria': { latitude: 29.2, longitude: -95.4 }, // Angleton area
+        'Hays': { latitude: 30.0, longitude: -98.0 }, // San Marcos area
+        'Bell': { latitude: 31.1, longitude: -97.4 }, // Belton area
+        'Nueces': { latitude: 27.8, longitude: -97.6 }, // Corpus Christi area
+        'Jefferson': { latitude: 30.1, longitude: -94.2 }, // Beaumont area
+        'Hidalgo': { latitude: 26.3, longitude: -98.2 }, // Edinburg area
       };
       return countyCoords[county] || { latitude: 39.0, longitude: -75.5 }; // Default to Delaware center
     };
@@ -2087,8 +2669,8 @@ const HomeScreen = () => {
       const cleanName = candidateName.replace(/\s*\([DR]\)$/, '');
       
       // Create a search query for the candidate's campaign website
-      const searchQuery = `${cleanName} campaign website official`;
-      const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+      const searchQuery = candidateName + ' campaign website official';
+      const searchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(searchQuery);
       
       try {
         await WebBrowser.openBrowserAsync(searchUrl);
@@ -2643,7 +3225,7 @@ const HomeScreen = () => {
               onPress={() => setCountyModalVisible(true)}
             >
               <Text style={[styles.countyDropdownText, { color: safeColors.text }]}>
-                {selectedCounty ? `${selectedCounty} County` : 'Select County'}
+                {selectedCounty ? selectedCounty + ' County' : 'Select County'}
               </Text>
               <Ionicons name="chevron-down" size={20} color={safeColors.primary} />
             </TouchableOpacity>

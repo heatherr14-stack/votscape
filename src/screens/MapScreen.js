@@ -101,7 +101,7 @@ function CrossPlatformMap({ location, loading, selectedYear }) {
 // County detection logic from HomeScreen
 const detectCountyFromCoordinates = (latitude, longitude) => {
   const countyBounds = {
-    // Texas Counties with approximate boundaries
+    // Texas Counties
     'Harris': { 
       minLat: 29.5, maxLat: 30.1, 
       minLng: -95.8, maxLng: -94.9 
@@ -130,18 +130,123 @@ const detectCountyFromCoordinates = (latitude, longitude) => {
       minLat: 29.4, maxLat: 29.8, 
       minLng: -96.1, maxLng: -95.6 
     },
-    'Williamson': { 
-      minLat: 30.4, maxLat: 30.8, 
-      minLng: -97.9, maxLng: -97.4 
+    
+    // California Counties
+    'Los Angeles': {
+      minLat: 33.7, maxLat: 34.8,
+      minLng: -118.9, maxLng: -117.6
     },
-    'Denton': { 
-      minLat: 33.0, maxLat: 33.4, 
-      minLng: -97.3, maxLng: -96.9 
+    'San Diego': {
+      minLat: 32.5, maxLat: 33.5,
+      minLng: -117.6, maxLng: -116.1
     },
-    'El Paso': { 
-      minLat: 31.6, maxLat: 32.0, 
-      minLng: -106.7, maxLng: -106.2 
+    'Orange': {
+      minLat: 33.4, maxLat: 33.9,
+      minLng: -118.1, maxLng: -117.4
     },
+    'Riverside': {
+      minLat: 33.4, maxLat: 34.1,
+      minLng: -117.7, maxLng: -114.4
+    },
+    'San Bernardino': {
+      minLat: 34.0, maxLat: 35.8,
+      minLng: -118.0, maxLng: -114.1
+    },
+    'Santa Clara': {
+      minLat: 37.0, maxLat: 37.5,
+      minLng: -122.2, maxLng: -121.2
+    },
+    'Alameda': {
+      minLat: 37.4, maxLat: 37.9,
+      minLng: -122.4, maxLng: -121.5
+    },
+    'Sacramento': {
+      minLat: 38.2, maxLat: 38.8,
+      minLng: -121.8, maxLng: -121.0
+    },
+    
+    // New York Counties
+    'Kings': { // Brooklyn
+      minLat: 40.5, maxLat: 40.7,
+      minLng: -74.1, maxLng: -73.8
+    },
+    'Queens': {
+      minLat: 40.5, maxLat: 40.8,
+      minLng: -73.9, maxLng: -73.7
+    },
+    'New York': { // Manhattan
+      minLat: 40.7, maxLat: 40.9,
+      minLng: -74.0, maxLng: -73.9
+    },
+    'Suffolk': { // Long Island
+      minLat: 40.6, maxLat: 41.2,
+      minLng: -73.6, maxLng: -71.9
+    },
+    'Bronx': {
+      minLat: 40.8, maxLat: 40.9,
+      minLng: -73.9, maxLng: -73.8
+    },
+    
+    // Florida Counties
+    'Miami-Dade': {
+      minLat: 25.1, maxLat: 25.9,
+      minLng: -80.9, maxLng: -80.1
+    },
+    'Broward': {
+      minLat: 25.9, maxLat: 26.4,
+      minLng: -80.6, maxLng: -80.1
+    },
+    'Palm Beach': {
+      minLat: 26.3, maxLat: 27.0,
+      minLng: -80.6, maxLng: -80.0
+    },
+    'Hillsborough': { // Tampa
+      minLat: 27.7, maxLat: 28.2,
+      minLng: -82.8, maxLng: -82.0
+    },
+    
+    // Illinois Counties
+    'Cook': { // Chicago
+      minLat: 41.4, maxLat: 42.2,
+      minLng: -88.3, maxLng: -87.5
+    },
+    
+    // Arizona Counties
+    'Maricopa': { // Phoenix
+      minLat: 33.0, maxLat: 34.0,
+      minLng: -113.3, maxLng: -111.0
+    },
+    
+    // Nevada Counties
+    'Clark': { // Las Vegas
+      minLat: 35.0, maxLat: 37.0,
+      minLng: -115.8, maxLng: -114.0
+    },
+    
+    // Washington Counties
+    'King': { // Seattle
+      minLat: 47.1, maxLat: 47.8,
+      minLng: -122.5, maxLng: -121.1
+    },
+    
+    // Michigan Counties
+    'Wayne': { // Detroit
+      minLat: 42.2, maxLat: 42.5,
+      minLng: -83.5, maxLng: -82.9
+    },
+    
+    // Massachusetts Counties
+    'Middlesex': {
+      minLat: 42.2, maxLat: 42.7,
+      minLng: -71.6, maxLng: -70.9
+    },
+    
+    // Ohio Counties
+    'Cuyahoga': { // Cleveland
+      minLat: 41.3, maxLat: 41.6,
+      minLng: -81.9, maxLng: -81.4
+    },
+    
     // Delaware Counties
     'New Castle': { 
       minLat: 39.4, maxLat: 39.8, 
@@ -155,6 +260,7 @@ const detectCountyFromCoordinates = (latitude, longitude) => {
       minLat: 38.4, maxLat: 39.0, 
       minLng: -75.8, maxLng: -75.0 
     },
+    
     // Hawaii Counties
     'Honolulu': { 
       minLat: 21.2, maxLat: 21.7, 
@@ -176,6 +282,7 @@ const detectCountyFromCoordinates = (latitude, longitude) => {
       minLat: 21.1, maxLat: 21.3, 
       minLng: -157.0, maxLng: -156.8 
     },
+    
     // Rhode Island Counties
     'Providence': { 
       minLat: 41.7, maxLat: 42.0, 
@@ -208,12 +315,32 @@ const detectCountyFromCoordinates = (latitude, longitude) => {
 
 // Get state for a detected county
 const getStateForCounty = (county) => {
-  const TEXAS_COUNTIES = ['Harris', 'Dallas', 'Bexar', 'Travis', 'Collin', 'Tarrant', 'Fort Bend', 'Williamson', 'Denton', 'El Paso'];
+  const TEXAS_COUNTIES = ['Harris', 'Dallas', 'Bexar', 'Travis', 'Collin', 'Tarrant', 'Fort Bend'];
+  const CALIFORNIA_COUNTIES = ['Los Angeles', 'San Diego', 'Orange', 'Riverside', 'San Bernardino', 'Santa Clara', 'Alameda', 'Sacramento'];
+  const NEW_YORK_COUNTIES = ['Kings', 'Queens', 'New York', 'Suffolk', 'Bronx'];
+  const FLORIDA_COUNTIES = ['Miami-Dade', 'Broward', 'Palm Beach', 'Hillsborough'];
+  const ILLINOIS_COUNTIES = ['Cook'];
+  const ARIZONA_COUNTIES = ['Maricopa'];
+  const NEVADA_COUNTIES = ['Clark'];
+  const WASHINGTON_COUNTIES = ['King'];
+  const MICHIGAN_COUNTIES = ['Wayne'];
+  const MASSACHUSETTS_COUNTIES = ['Middlesex'];
+  const OHIO_COUNTIES = ['Cuyahoga'];
   const DELAWARE_COUNTIES = ['New Castle', 'Kent', 'Sussex'];
   const HAWAII_COUNTIES = ['Honolulu', 'Hawaii', 'Maui', 'Kauai', 'Kalawao'];
   const RHODE_ISLAND_COUNTIES = ['Providence', 'Washington', 'Bristol', 'Newport'];
   
   if (TEXAS_COUNTIES.includes(county)) return 'Texas';
+  if (CALIFORNIA_COUNTIES.includes(county)) return 'California';
+  if (NEW_YORK_COUNTIES.includes(county)) return 'New York';
+  if (FLORIDA_COUNTIES.includes(county)) return 'Florida';
+  if (ILLINOIS_COUNTIES.includes(county)) return 'Illinois';
+  if (ARIZONA_COUNTIES.includes(county)) return 'Arizona';
+  if (NEVADA_COUNTIES.includes(county)) return 'Nevada';
+  if (WASHINGTON_COUNTIES.includes(county)) return 'Washington';
+  if (MICHIGAN_COUNTIES.includes(county)) return 'Michigan';
+  if (MASSACHUSETTS_COUNTIES.includes(county)) return 'Massachusetts';
+  if (OHIO_COUNTIES.includes(county)) return 'Ohio';
   if (DELAWARE_COUNTIES.includes(county)) return 'Delaware';
   if (HAWAII_COUNTIES.includes(county)) return 'Hawaii';
   if (RHODE_ISLAND_COUNTIES.includes(county)) return 'Rhode Island';
